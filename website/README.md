@@ -1,5 +1,12 @@
 # PrairieWatchDog
 
+# Use this command to generate the /docs folder
+
+Run this from inside the website directory:
+```
+ng build --prod --output-path ../docs --base-href /website/
+```
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
 
 ## Development server

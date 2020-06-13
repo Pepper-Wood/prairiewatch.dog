@@ -29,6 +29,7 @@ Figma mockup edit link: https://www.figma.com/file/K3bzNxMlhj7dKZos7wS6m3/prairi
 
 - Tweak mockups.
 - Send okayish initial drafts to UserCrowd after the splash page on the website is complete.
+- PWD website also needs a blog component! Or the general pages component for blanket information.
 - Initialize the PWD website using angular. The website needs to have the following:
   - The front page is a mock of what the tool does
   - It should allow for email submissions to keep updated on progress

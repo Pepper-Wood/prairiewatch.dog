@@ -12,7 +12,7 @@ I'm going to use this post as my devlog that I update every day with the time sp
 - Added rough mock for the alert on Twitter feed. It's not perfect. I should use "User Crowd" for feedback!
 
 # Day 2 - June 11th, 2020
-#### Time: 2 hours. Roughly timed using 2 Pomodoro but was unfocussed.
+#### Time: 3 hours. Roughly timed using 2 Pomodoro but was unfocussed.
 - Adjusted Figma mocks and included super rough top tag for website.
 - Generated Angular website skeleton with 2 components: HomeComponent for the front page and EntryComponent for the company / user felon listing.
 - I'm not sure how to handle the URLs. Slugs seems like the best plan so that there's identifying info in the URL. Maybe instead of UUIDs it should be shorter alphanumeric, like:
@@ -21,3 +21,5 @@ I'm going to use this post as my devlog that I update every day with the time sp
     - Both of these should work
 
 An aside: I realized after yesterday's session, when looking up LuLaRoe information, that libel and defamation lawsuits could be possible based on the text provided here. https://blog.lulu.com/2018/07/05/the-dos-and-donts-of-how-to-avoid-a-defamation-lawsuit-as-an-author/ Reading this, the key takeaway is that the claims need to be properly sourced. Referring to LuLaRoe as a pyramid scheme is inaccurate. The page about MLMs should explain the correllation between the two and let the reader come to the conclusion. I wonder if there's a text linter for sourcing facts?
+
+- Spent over an hour troubleshooting the angular static site in docs. It's due to an issue with the custom domain name conflicting with the base href tag. Possible tutorial: https://shermandigital.com/blog/deploy-an-angular-cli-application-to-github-pages-with-a-custom-domain/

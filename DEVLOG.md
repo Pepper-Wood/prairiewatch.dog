@@ -25,5 +25,7 @@ An aside: I realized after yesterday's session, when looking up LuLaRoe informat
 - Spent over an hour troubleshooting the angular static site in docs. It's due to an issue with the custom domain name conflicting with the base href tag. Possible tutorial: https://shermandigital.com/blog/deploy-an-angular-cli-application-to-github-pages-with-a-custom-domain/
 
 # Day 3 - June 12th, 2020
-#### Time: X hours, ~X pomodoros
+#### Time: 1h 30m hours, ~2 pomodoros
 - Fixed angular build command to work with the custom domain. Followed: https://medium.com/@ole.ersoy/deploying-your-angular-application-to-github-pages-3781727779e1 and updated the README in the website folder
+- Fixed another issue with the GH angular pages. The solution was to duplicate index.html and rename as 404.html. This will have to be added as part of the manual build process.
+- Updated the splash page. Not really in a UI mood since there's not much in the way of solid prototypes. I'd love to do something jazzier, but this will do for now.

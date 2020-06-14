@@ -14,3 +14,4 @@ web-build:
 	cd website && ng build --prod --output-path ../docs --base-href=https://prairiewatch.dog/
 	cd ..
 	cp docs/index.html docs/404.html
+	printf "prairiewatch.dog" > docs/CNAME

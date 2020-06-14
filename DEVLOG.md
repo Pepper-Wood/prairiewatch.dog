@@ -29,3 +29,9 @@ An aside: I realized after yesterday's session, when looking up LuLaRoe informat
 - Fixed angular build command to work with the custom domain. Followed: https://medium.com/@ole.ersoy/deploying-your-angular-application-to-github-pages-3781727779e1 and updated the README in the website folder
 - Fixed another issue with the GH angular pages. The solution was to duplicate index.html and rename as 404.html. This will have to be added as part of the manual build process.
 - Updated the splash page. Not really in a UI mood since there's not much in the way of solid prototypes. I'd love to do something jazzier, but this will do for now.
+
+# Day 4 - June 13th, 2020
+### Time: X, X
+- Added Google Analytics tag
+- Added 'make web-build' command for updating the Angular build from the root directory
+- Makefile also now creates the CNAME file if it's missing, to finally resolve the issues with that getting wiped out for GitHub pages.

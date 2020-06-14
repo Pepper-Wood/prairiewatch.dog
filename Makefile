@@ -9,3 +9,8 @@ ext-build:
 	@echo "- yarn run start"
 	@echo "- go to chrome://extensions"
 	@echo "- Click on 'Load unpacked' and select the generated 'extension/build' folder"
+
+web-build:
+	cd website && ng build --prod --output-path ../docs --base-href=https://prairiewatch.dog/
+	cd ..
+	cp docs/index.html docs/404.html

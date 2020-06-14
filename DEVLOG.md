@@ -27,3 +27,4 @@ An aside: I realized after yesterday's session, when looking up LuLaRoe informat
 # Day 3 - June 12th, 2020
 #### Time: X hours, ~X pomodoros
 - Fixed angular build command to work with the custom domain. Followed: https://medium.com/@ole.ersoy/deploying-your-angular-application-to-github-pages-3781727779e1 and updated the README in the website folder
+- Fixed another issue with the GH angular pages. The solution was to duplicate index.html and rename as 404.html. This will have to be added as part of the manual build process.

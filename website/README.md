@@ -4,7 +4,7 @@
 
 Run this from inside the website directory:
 ```
-ng build --prod --output-path ../docs --base-href /website/
+ng build --prod --output-path ../docs --base-href=https://prairiewatch.dog/
 ```
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.

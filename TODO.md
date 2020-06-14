@@ -16,6 +16,7 @@ Figma mockup edit link: https://www.figma.com/file/K3bzNxMlhj7dKZos7wS6m3/prairi
 - Update LuLaRoe `listings.json` entry with specifics like the earnings report.
 - Create `facebook.json` for facebook pages later on when the proof-of-concept is better in place
 - Add more MLMs
+- Migrate documentation for working in this repo to the wiki
 
 ## Other thoughts
 I don't want to do automation at this stage of the game. It's also a bit trickier with the fact this is a monorepo for now. In the future, when PRs are more focussed on individual features instead of touching everything at once, being able to label the PR with what aspect is being modified and then having that affect the build steps...??

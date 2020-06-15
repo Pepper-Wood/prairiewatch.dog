@@ -7,14 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EntryComponent } from './entry/entry.component';
 import { HomeComponent } from './home/home.component';
-import { CategoryComponent } from './category/category.component';
+import { OffenseComponent } from './offense/offense.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EntryComponent,
     HomeComponent,
-    CategoryComponent
+    OffenseComponent
   ],
   imports: [
     BrowserModule,

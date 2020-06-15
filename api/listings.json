@@ -4,8 +4,7 @@
     "counts": [
       {
         "severity": "high",
-        "category": "mlm",
-        "misdemeanor": "Multi-Level Marketing Company",
+        "offense": "multi-level-marketing",
         "body": "LuLaRoe is an MLM."
       }
     ]

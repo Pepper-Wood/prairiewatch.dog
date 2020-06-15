@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { EntryComponent } from './entry/entry.component';
-import { CategoryComponent } from './category/category.component';
+import { OffenseComponent } from './offense/offense.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'e/:uuid', component: EntryComponent },
-  { path: 'c/:id', component: CategoryComponent, pathMatch: 'full'}
+  { path: 'e/:id', component: EntryComponent },
+  { path: 'o/:id', component: OffenseComponent, pathMatch: 'full'}
 ];
 
 @NgModule({

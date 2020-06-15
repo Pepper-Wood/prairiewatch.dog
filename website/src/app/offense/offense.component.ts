@@ -2,18 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-category',
-  templateUrl: './category.component.html',
-  styleUrls: ['./category.component.css']
+  selector: 'app-offense',
+  templateUrl: './offense.component.html',
+  styleUrls: ['./offense.component.css']
 })
-export class CategoryComponent implements OnInit {
+export class OffenseComponent implements OnInit {
   post: string;
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.post = './assets/categories/' +  params['id'] + '.md';
+      this.post = './assets/offenses/' +  params['id'] + '.md';
     });
   }
 

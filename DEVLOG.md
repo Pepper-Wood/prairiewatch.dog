@@ -37,3 +37,9 @@ An aside: I realized after yesterday's session, when looking up LuLaRoe informat
 - Makefile also now creates the CNAME file if it's missing, to finally resolve the issues with that getting wiped out for GitHub pages.
 - Added ngx-markdown following https://medium.com/@david.dalbusco/add-a-blog-to-your-angular-website-using-markdown-files-31cdb0627bdd and the install instructions at https://jfcere.github.io/ngx-markdown/get-started. This also required updating the angular and typescript dependencies
 - Created CategoryComponent that will navigate to a markdown file, which will be used for showing the category information pages. For now, i.e., the MLM category info can be viewed at https://prairiewatch.dog/c/12345, where 12345.md is the markdown file.
+
+# Day 5 - June 14th, 2020
+### Time: 1 hour
+- Updated `category` component to `offense`. I'll need to still refactor it so that there's a way to see the full list of offenses on the left hand-menu and selecting a sub-category will give the information. Maybe like the search bar that appears on the Bootstrap documentation?
+- Tweaked the front page of the website. Mostly just thinking about laying it out. There's still other stuff that needs to be done that I need to set up before linking it to this page.
+

@@ -31,7 +31,9 @@ An aside: I realized after yesterday's session, when looking up LuLaRoe informat
 - Updated the splash page. Not really in a UI mood since there's not much in the way of solid prototypes. I'd love to do something jazzier, but this will do for now.
 
 # Day 4 - June 13th, 2020
-### Time: X, X
+### Time: 3 hours
 - Added Google Analytics tag
 - Added 'make web-build' command for updating the Angular build from the root directory
 - Makefile also now creates the CNAME file if it's missing, to finally resolve the issues with that getting wiped out for GitHub pages.
+- Added ngx-markdown following https://medium.com/@david.dalbusco/add-a-blog-to-your-angular-website-using-markdown-files-31cdb0627bdd and the install instructions at https://jfcere.github.io/ngx-markdown/get-started. This also required updating the angular and typescript dependencies
+- Created CategoryComponent that will navigate to a markdown file, which will be used for showing the category information pages. For now, i.e., the MLM category info can be viewed at https://prairiewatch.dog/c/12345, where 12345.md is the markdown file.

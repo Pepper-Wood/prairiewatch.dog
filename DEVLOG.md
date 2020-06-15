@@ -43,3 +43,5 @@ An aside: I realized after yesterday's session, when looking up LuLaRoe informat
 - Updated `category` component to `offense`. I'll need to still refactor it so that there's a way to see the full list of offenses on the left hand-menu and selecting a sub-category will give the information. Maybe like the search bar that appears on the Bootstrap documentation?
 - Tweaked the front page of the website. Mostly just thinking about laying it out. There's still other stuff that needs to be done that I need to set up before linking it to this page.
 - Enabled dependabot and configured a `dependabot.yml` to check for dependencies in both `/website` and `/extension`.
+- Reverted changes in `extension/` since re-running `yarn` resulted in build failures.
+- Added note for tomorrow about replacing the `extension/` boilerplate with work based on what the Mozilla examples show. Hopefully this will allow for it to become cross-browser compatible.

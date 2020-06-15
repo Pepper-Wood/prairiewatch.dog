@@ -1,5 +1,5 @@
 {
-  "name": "Prairie Watchdog",
+  "name": "Chrome Extension Webpack",
   "options_page": "options.html",
   "background": {
     "page": "background.html"

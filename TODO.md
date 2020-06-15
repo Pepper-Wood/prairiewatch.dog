@@ -3,6 +3,8 @@ UUID generator: https://www.uuidgenerator.net/
 Figma mockup edit link: https://www.figma.com/file/K3bzNxMlhj7dKZos7wS6m3/prairiewatch.dog?node-id=0%3A1
 - https://usabilityhub.com/
 
+- The `extension/` directory should switch from this webpack template to a possible cross-browser solution based on the recently updated https://github.com/mdn/webextensions-examples
+  - See the "Support for other browsers" for the link to the polyfill that will be needed to get this to work on Chrome.
 - Tweak mockups.
 - Send okayish initial drafts to UserCrowd after the splash page on the website is complete.
 - PWD website also needs a blog component for general updates and potentially large announcements? Or is there a better alternative? Eh, blogging might be useful just in case, structured in the same way as category pages.

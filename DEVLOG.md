@@ -39,9 +39,24 @@ An aside: I realized after yesterday's session, when looking up LuLaRoe informat
 - Created CategoryComponent that will navigate to a markdown file, which will be used for showing the category information pages. For now, i.e., the MLM category info can be viewed at https://prairiewatch.dog/c/12345, where 12345.md is the markdown file.
 
 # Day 5 - June 14th, 2020
-### Time: 1 hour
+### Time: 2 hours
 - Updated `category` component to `offense`. I'll need to still refactor it so that there's a way to see the full list of offenses on the left hand-menu and selecting a sub-category will give the information. Maybe like the search bar that appears on the Bootstrap documentation?
 - Tweaked the front page of the website. Mostly just thinking about laying it out. There's still other stuff that needs to be done that I need to set up before linking it to this page.
 - Enabled dependabot and configured a `dependabot.yml` to check for dependencies in both `/website` and `/extension`.
 - Reverted changes in `extension/` since re-running `yarn` resulted in build failures.
 - Added note for tomorrow about replacing the `extension/` boilerplate with work based on what the Mozilla examples show. Hopefully this will allow for it to become cross-browser compatible.
+
+# Day 6 - June 15th, 2020
+### Time: 2 hours
+- Updated the text of the `multi-level-marketing.md` category page so that it has the start of a template and a list of offenses that can be directly tied to the category.
+- Added a complete count against LuLaRoe based on its internal ranking structure depending on recruitment numbers. Parsing that is crazy, and I'm not sure if it's totally accurate. It certainly gets the point across. I'm wondering how I can find someone to cross-reference these findings and help to grok the language.
+- Added 2 entries for Cameron Stewart, based on a tweet that came across my feed.
+
+It's only the morning so far, and this has already raised questions about some things I still need to figure out how to handle that aren't technical.
+- Thinking on this more, maybe it's a matter of setting a points scale? How does the weight of anonymous reports come in affect the result?
+  - Assume John is a predator, and 10 women have come forward with accounts of sexual assault. 1 woman has DNA proof, 3 have digital proof (i.e. text message screenshots), 6 have first-hand accounts. What a depressing math problem.
+  - The point value ascribed to each count is based on the severity of the crime and the source provided.
+  - I just realized this is like a sales health score but with crime.
+
+I'm definitely rusty with researching, or maybe that's just the LuLaRoe lingo getting to me. Also, the more I think about it, I guess this will be writing my own legislature. I established that court rulings may not be the moral end. Does this open up a can of worms?
+- I will think on this more, but I feel more confident about it. 

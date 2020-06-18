@@ -47,7 +47,7 @@ An aside: I realized after yesterday's session, when looking up LuLaRoe informat
 - Added note for tomorrow about replacing the `extension/` boilerplate with work based on what the Mozilla examples show. Hopefully this will allow for it to become cross-browser compatible.
 
 # Day 6 - June 15th, 2020
-### Time: 2 hours
+### Time: 2 hours programming, 2 hours creating tweet personas in the Figma mocks
 - Updated the text of the `multi-level-marketing.md` category page so that it has the start of a template and a list of offenses that can be directly tied to the category.
 - Added a complete count against LuLaRoe based on its internal ranking structure depending on recruitment numbers. Parsing that is crazy, and I'm not sure if it's totally accurate. It certainly gets the point across. I'm wondering how I can find someone to cross-reference these findings and help to grok the language.
 - Added 2 entries for Cameron Stewart, based on a tweet that came across my feed.
@@ -60,3 +60,28 @@ It's only the morning so far, and this has already raised questions about some t
 
 I'm definitely rusty with researching, or maybe that's just the LuLaRoe lingo getting to me. Also, the more I think about it, I guess this will be writing my own legislature. I established that court rulings may not be the moral end. Does this open up a can of worms?
 - I will think on this more, but I feel more confident about it. 
+
+Ended up spending yesterday evening playing around in Figma trying to replicate Twitter for mocks.
+
+# Day 7 - June 16th, 2020
+### Time: 1 hr 20 min, 3 full pomodoros
+Resuming work on this at 10:20pm lol. Much later start than the other days. Also, nice! 1st week in the bag.
+
+Copying from commits:
+- Added `annotate-page` from `https://github.com/mdn/webextensions-examples`
+- Switched from `annotate-page` example to `borderify`
+- Super simple prototype set up 🙌
+- Initial (failing) implementation to make GET requests to the JSON files I have stored in the `api/` master branch folder.
+
+Helpful list of references:
+- Where it all started: https://dev.to/vinceumo/cross-browser-extensions-with-webextensions-api---101-40hj
+  - Link at the top of the page is broken and should be https://vinceumo.github.io/devNotes/Javascript/webextensionapi/
+- I downloaded web-ext too. I did it globally, then deleted to install locally, then deleted and reinstalled globally (there's a ridiculous number of npm packages used): https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/
+  - https://github.com/mozilla/web-ext
+- https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples
+- https://stackoverflow.com/questions/2499567/how-to-make-a-json-call-to-a-url/2499647#2499647
+- https://towardsdatascience.com/using-github-pages-for-creating-global-api-76b296c4b3b5
+
+Stopping for now at 11:42pm. Next step is to try out the answer proposed in this stack-overflow: https://stackoverflow.com/questions/57410668/webextension-access-json-dictionary-from-external-url-how
+This would use background.js to cache the results of the API in the browser and then use content.js to use that as the reference.
+I also still need to ensure that this extension is cross-browser compatible. Luckily, it's super small at the moment and entirely vanilla.

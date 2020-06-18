@@ -1,0 +1,16 @@
+{
+  "description": "Demand Accountability. Automatically tags social media profiles based on their past offenses.",
+  "manifest_version": 2,
+  "name": "prairiewatch.dog",
+  "version": "1.0",
+  "homepage_url": "https://github.com/Pepper-Wood/prairiewatch.dog",
+  "icons": {
+    "48": "icons/star.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["websites.js"]
+    }
+  ]
+}

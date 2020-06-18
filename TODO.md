@@ -21,6 +21,8 @@ Figma mockup edit link: https://www.figma.com/file/K3bzNxMlhj7dKZos7wS6m3/prairi
 - Create `facebook.json` for facebook pages later on when the proof-of-concept is better in place
 - Add more MLMs
 - Migrate documentation for working in this repo to the wiki
+- Twitter should match on an ID and not username, due to user's abilities to change them.
+- Remove Cameron Stewart (or relocate the evidence elsewhere for now). For testing and initial versions, only permanent offenses should be added so that the health score calculation can be figured out later without the end result having a totally different scale for offenses.
 
 ## Other thoughts
 I don't want to do automation at this stage of the game. It's also a bit trickier with the fact this is a monorepo for now. In the future, when PRs are more focussed on individual features instead of touching everything at once, being able to label the PR with what aspect is being modified and then having that affect the build steps...??

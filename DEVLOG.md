@@ -64,7 +64,7 @@ I'm definitely rusty with researching, or maybe that's just the LuLaRoe lingo ge
 Ended up spending yesterday evening playing around in Figma trying to replicate Twitter for mocks.
 
 # Day 7 - June 16th, 2020
-### Time: 1 hr 20 min, 3 full pomodoros
+### Time: 1 hr 40 min, 3 full pomodoros
 Resuming work on this at 10:20pm lol. Much later start than the other days. Also, nice! 1st week in the bag.
 
 Copying from commits:
@@ -72,6 +72,7 @@ Copying from commits:
 - Switched from `annotate-page` example to `borderify`
 - Super simple prototype set up 🙌
 - Initial (failing) implementation to make GET requests to the JSON files I have stored in the `api/` master branch folder.
+- Fixed the Karma/Jasmine angular tests in `website/` after running `ng test`. They were all failing due to needing RouterTestingModule to be imported into each component test spec, i.e. `home.component.spec.ts`. Tests passing will allow me to continue going through Dependabot's PR updates.
 
 Helpful list of references:
 - Where it all started: https://dev.to/vinceumo/cross-browser-extensions-with-webextensions-api---101-40hj

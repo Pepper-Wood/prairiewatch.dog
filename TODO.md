@@ -16,6 +16,7 @@ Figma mockup edit link: https://www.figma.com/file/K3bzNxMlhj7dKZos7wS6m3/prairi
     - https://mailchimp.com/help/add-a-signup-form-to-your-website/
   - A test page for a form submission similar to what a user might type in
   - A test page for connecting a result from the extension to the API
+- Update tests to check against fixtures for API results. See `app.component.spec.ts` for an example of something that was commented out that should be brought back in but revamped.
 
 - Update LuLaRoe `listings.json` entry with specifics like the earnings report.
 - Create `facebook.json` for facebook pages later on when the proof-of-concept is better in place

@@ -1,19 +1,15 @@
-// API call to GET JSON from url.
-function getJSONP(url, success) {
-  var ud = '_' + +new Date,
-    script = document.createElement('script'),
-    head = document.getElementsByTagName('head')[0] || document.documentElement;
-
-    window[ud] = function(data) {
-    head.removeChild(script);
-    success && success(data);
-  };
-
-  script.src = url.replace('callback=?', 'callback=' + ud);
-  head.appendChild(script);
+function httpGetAsync(theUrl, callback) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(xmlHttp.responseText);
+    }
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    xmlHttp.send(null);
 }
 
 // Main
+/*
 console.log("Inside websites.js");
 baseUrl = "https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/master/api/";
 if (window.location.hostname == "twitter.com") {
@@ -28,4 +24,5 @@ if (window.location.hostname == "twitter.com") {
   });
 }
 console.log("End of websites.js");
+*/
 

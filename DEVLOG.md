@@ -86,3 +86,12 @@ Helpful list of references:
 Stopping for now at 11:42pm. Next step is to try out the answer proposed in this stack-overflow: https://stackoverflow.com/questions/57410668/webextension-access-json-dictionary-from-external-url-how
 This would use background.js to cache the results of the API in the browser and then use content.js to use that as the reference.
 I also still need to ensure that this extension is cross-browser compatible. Luckily, it's super small at the moment and entirely vanilla.
+
+# Day 8 - June 17th, 2020
+### Time: 40m, 1.5 pomodoros
+
+- Bump @types/jasmine from 3.3.16 to 3.5.10 in /website #16
+- Bump @angular/cli from 10.0.0-rc.3 to 10.0.0-rc.5 in /website #22
+- Very briefly started up again updating the vanilla js in the chrome extension. Seeing https://stackoverflow.com/questions/247483/http-get-request-in-javascript for setting up proper API calls (using a test API before making that full implementation committment), it just feels... wrong. Like there's gotta be easier ways. Started looking into webpack; not sure how that fits in.
+
+URL for testing API call handling: https://jsonplaceholder.typicode.com/

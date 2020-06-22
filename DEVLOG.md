@@ -95,3 +95,24 @@ I also still need to ensure that this extension is cross-browser compatible. Luc
 - Very briefly started up again updating the vanilla js in the chrome extension. Seeing https://stackoverflow.com/questions/247483/http-get-request-in-javascript for setting up proper API calls (using a test API before making that full implementation committment), it just feels... wrong. Like there's gotta be easier ways. Started looking into webpack; not sure how that fits in.
 
 URL for testing API call handling: https://jsonplaceholder.typicode.com/
+
+
+
+# Day 9 - June 18th, 2020
+### Time: 3h, used 1 pomodoro
+
+Writing this summary 2 days later. I went down a rabbit hole to try again with setting up an angualr-based framework for the chrome extension. But after working with it for a while, I realize it'll be total overkill for what's needed. The angular part would make more sense if the UI the user navigates to is a browser-stored webpage. But since I'm using prairiewatch.dog instead, then it's not necessary. Totally basic, vanilla browser extension it is.
+
+I added jQuery too and tried to set up an API call to GET https://jsonplaceholder.typicode.com/todos/1, but it fails with no error message printed.
+
+- https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
+- Downloaded https://www.npmjs.com/package/chrome-ext-downloader to view similar chrome extensions
+
+# Day 10 - June 20th, 2020
+### Time ?
+
+Took yesterday as a day off. I'm and fully motivated today. Twitter has had a sudden trend of sexual assault victims coming forward. It's helped to push me to keep moving forward.
+
+- I have a working demo for the chrome extension that fetches from a URL!! I realize now I need to build up an API more so that it could be more like:
+GET https://api.prairiewatch.dog/search?type=twitter&q=LuLaRoe
+GET https://api.prairiewatch.dog/search?type=url&q=lularoe.com

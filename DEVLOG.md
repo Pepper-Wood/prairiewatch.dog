@@ -109,10 +109,10 @@ I added jQuery too and tried to set up an API call to GET https://jsonplaceholde
 - Downloaded https://www.npmjs.com/package/chrome-ext-downloader to view similar chrome extensions
 
 # Day 10 - June 20th, 2020
-### Time ?
+### Time 2 hours
 
 Took yesterday as a day off. I'm and fully motivated today. Twitter has had a sudden trend of sexual assault victims coming forward. It's helped to push me to keep moving forward.
 
 - I have a working demo for the chrome extension that fetches from a URL!! I realize now I need to build up an API more so that it could be more like:
-GET https://api.prairiewatch.dog/search?type=twitter&q=LuLaRoe
-GET https://api.prairiewatch.dog/search?type=url&q=lularoe.com
+GET https://prairiewatch.dog/api/v1/search?type=twitter&q=LuLaRoe
+GET https://prairiewatch.dog/api/v1/search?type=url&q=lularoe.com

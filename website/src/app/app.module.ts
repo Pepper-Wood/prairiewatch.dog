@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { EntryComponent } from './entry/entry.component';
 import { HomeComponent } from './home/home.component';
 import { OffenseComponent } from './offense/offense.component';
+import { ApiComponent } from './api/api.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EntryComponent,
     HomeComponent,
-    OffenseComponent
+    OffenseComponent,
+    ApiComponent
   ],
   imports: [
     BrowserModule,

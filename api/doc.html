@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swagger UI</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro:300,600|Titillium+Web:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/swagger-ui.css" >
+  <style>
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+    body {
+      margin:0;
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+<div id="swagger-ui"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/swagger-ui-bundle.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/swagger-ui-standalone-preset.js"> </script>
+<script>
+window.onload = function() {
+  var spec = {"openapi": "3.0.0", "info": {"title": "prairiewatch.dog Public API", "version": "1.0.0"}, "servers": [{"url": "https://api.prairiewatch.dog/v1"}], "paths": {"/offenders": {"get": {"summary": "List all offenders based on site passed in.", "operationId": "listOffenders", "parameters": [{"name": "site", "in": "query", "description": "Website category to query, i.e. twitter.", "required": true, "schema": {"type": "string", "enum": ["twitter", "website"]}}], "responses": {"200": {"description": "An array of offender usernames based on site.", "content": {"application/json": {"schema": {"type": "array", "items": {"type": "string"}}}}}}}}, "/offender": {"get": {"summary": "Get details for a specific offender.", "operationId": "getOffender", "parameters": [{"name": "id", "in": "query", "description": "An associated offender ID", "required": true, "schema": {"type": "string", "format": "byte"}}], "responses": {"200": {"description": "Details for a specific offender.", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Offender"}}}}}}}}, "components": {"schemas": {"Offender": {"type": "object", "required": ["name", "id"], "properties": {"name": {"type": "string"}, "id": {"type": "string", "format": "byte"}, "counts": {"type": "array", "items": {"$ref": "#/components/schemas/Offense"}}}}, "Offense": {"type": "object", "required": ["name", "type", "source", "body"], "properties": {"name": {"type": "string"}, "type": {"type": "string"}, "source": {"$ref": "#/components/schemas/Source"}, "body": {"type": "string"}}}, "Source": {"type": "object", "required": ["idk"], "properties": {"url": {"type": "string"}, "incident_timestamp": {"type": "integer", "format": "int32"}, "reported_timestamp": {"type": "integer", "format": "int32"}, "type": {"type": "string"}}}}}};
+  // Build a system
+  const ui = SwaggerUIBundle({
+    spec: spec,
+    dom_id: '#swagger-ui',
+    deepLinking: true,
+    presets: [
+      SwaggerUIBundle.presets.apis,
+      SwaggerUIStandalonePreset
+    ],
+    plugins: [
+      SwaggerUIBundle.plugins.DownloadUrl
+    ],
+    layout: "StandaloneLayout"
+  })
+  window.ui = ui
+}
+</script>
+</body>
+</html>

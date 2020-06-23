@@ -1,14 +1,29 @@
 # Multi-Level Marketing
-Text from this page courtesy of https://www.reddit.com/r/antiMLM/.
 
-## What is an MLM?
-The idea behind MLMs is that people pay to become distributors of a product. These can be physical products or services. The company is structured so that the people above (the person who recruited or signed up the new distributor, the people above them, ad infinitum) get a percentage of whatever the distributor sells. The new distributor is encouraged not only to sell the product, but to sign up other people below them so that they can make even more money. courtesy [https://www.reddit.com/u/copacetic1515]
+Multi-Level Marketing (MLM) is a marketing strategy employed by companies where employees (or "distributors") earn money via two revenue streams:
+- by **selling the MLM’s products** yourself to “retail” customers who are not involved in the MLM[^1]
+- by **recruiting new distributors** and earning commissions based on what they buy and their sales to retail customers.[^1]
 
-## What is a "Hun"?
-People who shill products/services for an MLM. The sellers have a tendency to frequently use the word "hun" when initiating a sales pitch. Ex: “Hey hun ❤️❤️ I see your aunt is dying 😱😱 anyway hun 😊💁‍♀️ wanna buy my oils it’s good for stress 😍😘😘”. courtesy (u/fiestaspongebob)[https://www.reddit.com/u/fiestaspongebob]
+Some MLMs are illegal Pyramid Schemes, where the majority of revenue is derived from the second of the aforementioned streams: through recruiting new distributors. "If the MLM is not a pyramid scheme, it will pay you based on your sales to retail customers, without having to recruit new distributors."[^1]
 
-## Is there a master list for all of the MLMs?
-This app is in progress of updating the listings with all known MLMs. For other references or for a quicker search, visit http://www.isthisanmlm.com/ or https://mlmtruth.org/master-list/. courtesy (u/SHIFTnSPACE)[https://www.reddit.com/u/SHIFTnSPACE]
+Other common qualities of an MLM, though these do not fall under offenses:
+- The product is sub-par but priced high
+- The company requires new distributors to purchase a starter kit to buy into the company
+- Distributors are encouraged to reach out to their friends and family for sales and recruitment
+- Distributors may purport to be "small business owners" and are encouraged to "be their own boss".
 
-## How about income disclosure information?
-Yep, please see the (Mega Thread of Income Disclosures)[https://www.reddit.com/r/antiMLM/comments/8vnute/income_disclosure_analysis_master_thread/]. courtesy (u/flippzar)[https://www.reddit.com/u/flippzar]
+## Types of Offenses
+
+### A. The company's income disclosure information indicates the majority of revenue for distributors comes from recruitment.
+If the majority of distributors within a company or the company itself make more than 50% of their profits through recruitment over selling product.
+
+### B. The company's income disclosure information indicates majority of distributors do not turn a profit.
+
+### C. The company's ranking system requires a set number of people to be recruited in routine timeframes.
+If rising up the "corporate ladder" requires hitting sale marks on a monthly or routine basis, and those sale marks are based on recruiting new distributors.
+
+### D. The individual is a high-ranking member of a Multi-Level Marketing company.
+
+----
+
+[^1]: “Multi-Level Marketing Businesses and Pyramid Schemes.” Federal Trade Commission: Consumer Information, 3 Oct. 2019, www.consumer.ftc.gov/articles/0065-multi-level-marketing-businesses-and-pyramid-schemes.

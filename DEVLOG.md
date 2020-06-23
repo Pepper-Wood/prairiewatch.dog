@@ -125,3 +125,8 @@ In the meantime, for today:
 - Spent some time side-tracked with Twitter IDs. Twitter associates accounts with a user_id that's a long integer. i.e., Pepper__Wood the username correlates to 777173630316785664 the user_id. I started writing a script for parsing the user_id out of it when Tyler reminded me I could use the API. I'm holding off, since the purpose of this would be to capture users who change their usernames without needing to manually retag them. I'll need to move this to the later TODO, as it is much nicher use cases vs. still needing to tackle the beast.
 - http://api.prairiewatch.dog is on the Acquia prod site, while https://prairiewatch.dog is still on GitHub pages.
 - Started an OpenAPI specification for the to-be-implemented GET endpoints. These will be implemented on the PHP website.
+
+# Day 13 - June 23rd, 2020
+### Time: 1 hour
+- Added Swagger UI documentation page to the angular website following this stack-overflow: https://stackoverflow.com/questions/44894013/adding-swagger-ui-to-angular-app
+  - Use this gist to point me in the direction to use Swagger UI: https://gist.github.com/oseiskar/dbd51a3727fc96dcf5ed189fca491fb3

@@ -387,6 +387,9 @@ Apache-2.0
  
 
 
+swagger-ui-dist
+Apache-2.0
+
 zone.js
 MIT
 The MIT License

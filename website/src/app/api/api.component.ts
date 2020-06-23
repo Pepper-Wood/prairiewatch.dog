@@ -19,8 +19,7 @@ export class ApiComponent implements OnInit {
         SwaggerUIBundle.presets.apis,
         SwaggerUIBundle.SwaggerUIStandalonePreset
       ],
-      url: 'https://petstore.swagger.io/v2/swagger.json',
-      docExpansion: 'none',
+      url: 'https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/master/api/spec.yml',
       operationsSorter: 'alpha'
     });
   }

@@ -96,8 +96,6 @@ I also still need to ensure that this extension is cross-browser compatible. Luc
 
 URL for testing API call handling: https://jsonplaceholder.typicode.com/
 
-
-
 # Day 9 - June 18th, 2020
 ### Time: 3h, used 1 pomodoro
 
@@ -109,10 +107,21 @@ I added jQuery too and tried to set up an API call to GET https://jsonplaceholde
 - Downloaded https://www.npmjs.com/package/chrome-ext-downloader to view similar chrome extensions
 
 # Day 10 - June 20th, 2020
-### Time 2 hours
+### Time: 2 hours
 
 Took yesterday as a day off. I'm and fully motivated today. Twitter has had a sudden trend of sexual assault victims coming forward. It's helped to push me to keep moving forward.
 
 - I have a working demo for the chrome extension that fetches from a URL!! I realize now I need to build up an API more so that it could be more like:
 GET https://prairiewatch.dog/api/v1/search?type=twitter&q=LuLaRoe
 GET https://prairiewatch.dog/api/v1/search?type=url&q=lularoe.com
+
+# Day 12 - June 22nd, 2020
+### Time: 4 hours
+
+I didn't get to add a Devlog yesterday, and I'm blanking on what I did. I think I was spending yesterday researching into working on the API and how to construct it. I've decided to utilize the free website I have with Acquia as the backbone. I still want the front-end to be GitHub pages so that as much of it can be open source as possible. I'm unsure and confused about how to manage the back and forth of these three platforms, and how to better coordinate with this monorepo.
+
+In the meantime, for today:
+- Mulled over how to go about storing the public, open-source database and how to migrate what I can to an API. The decision is to have merges to master fire off a call on the PHP-side to pull in the changes and update the databases necessary. Not sure how that's gonna work out; how to figure out parsing the diff for changes.
+- Spent some time side-tracked with Twitter IDs. Twitter associates accounts with a user_id that's a long integer. i.e., Pepper__Wood the username correlates to 777173630316785664 the user_id. I started writing a script for parsing the user_id out of it when Tyler reminded me I could use the API. I'm holding off, since the purpose of this would be to capture users who change their usernames without needing to manually retag them. I'll need to move this to the later TODO, as it is much nicher use cases vs. still needing to tackle the beast.
+- http://api.prairiewatch.dog is on the Acquia prod site, while https://prairiewatch.dog is still on GitHub pages.
+- Started an OpenAPI specification for the to-be-implemented GET endpoints. These will be implemented on the PHP website.

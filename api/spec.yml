@@ -1,0 +1,100 @@
+openapi: 3.1.0
+info:
+  title: prairiewatch.dog Public API
+  version: 1.0.0
+servers:
+  - url: https://api.prairiewatch.dog/v1
+paths:
+  /offenders:
+    get:
+      summary: List all offenders based on site passed in.
+      operationId: listOffenders
+      parameters:
+        - name: site
+          in: query
+          description: Website category to query, i.e. twitter.
+          required: true
+          schema:
+            type: string
+            enum: [twitter, website]
+      responses:
+        '200':
+          description: An array of offender usernames based on site.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /offender:
+    get:
+      summary: Get details for a specific offender.
+      operationId: getOffender
+      parameters:
+        - name: id
+          in: query
+          description: An associated offender ID
+          required: true
+          schema:
+            type: string
+            format: byte
+      responses:
+        '200':
+          description: Details for a specific offender.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Offender'
+
+
+
+components:
+  schemas:
+    Offender:
+      type: object
+      required:
+        - name
+        - id
+      properties:
+        name:
+          type: string
+        id:
+          type: string
+          format: byte
+        counts:
+          type: array
+          items:
+            $ref: '#/components/schemas/Offense'
+
+    Offense:
+      type: object
+      required:
+        - name
+        - type
+        - source
+        - body
+      properties:
+        name:
+          type: string
+        type:
+          type: string
+        source:
+          $ref: '#/components/schemas/Source'
+        body:
+          type: string
+
+    Source:
+      type: object
+      required:
+        - idk
+      properties:
+        url:
+          type: string
+        incident_timestamp:
+          type: integer
+          format: int32
+        reported_timestamp:
+          type: integer
+          format: int32
+        type:
+          type: string

@@ -130,3 +130,16 @@ In the meantime, for today:
 ### Time: 1 hour
 - Added Swagger UI documentation page to the angular website following this stack-overflow: https://stackoverflow.com/questions/44894013/adding-swagger-ui-to-angular-app
   - Use this gist to point me in the direction to use Swagger UI: https://gist.github.com/oseiskar/dbd51a3727fc96dcf5ed189fca491fb3
+
+# Day 14 - June 25th, 2020
+### Time: 3 hours
+- Taking a break from other implementations to work on the API. The spec is now out-of-date as I realized:
+  - resorting to UUIDs seems to be the best modern method. The UUIDs don't need to be exposed for page views or in the URLs and will be used for just associating between social media profiles and offender information
+  - GET /offenders/twitter is the new pattern instead of GET /offenders?site=twitter
+- I haven't added the startup command, but the path is:
+```
+cd api/phptesting
+php -S localhost:8080 -t public public/index.php
+```
+
+The URL is not secure, so API tests are against http://localhost:8080/offenders/twitter

@@ -20,13 +20,15 @@ $customErrorHandler = function (
     bool $logErrorDetails
 ) use ($app) {
     $payload = ['error' => $exception->getMessage()];
-
     $response = $app->getResponseFactory()->createResponse();
     $response->getBody()->write(
         json_encode($payload, JSON_UNESCAPED_UNICODE)
     );
-
-    return $response;
+    return $response->withStatus(404)
+            ->withHeader('Content-Type', 'application/json')
+            ->withHeader('Access-Control-Allow-Origin', '*')
+            ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
+            ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
 };
 
 /**
@@ -54,7 +56,11 @@ $app->get('/v0/offenders/{site}', function (Request $request, ResponseInterface 
             "offenders" => $example
         ];
         $response->getBody()->write(json_encode($example));
-        return $response->withHeader('Content-Type', 'application/json');
+        return $response->withStatus(200)
+            ->withHeader('Content-Type', 'application/json')
+            ->withHeader('Access-Control-Allow-Origin', '*')
+            ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
+            ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
     } else if ($args["site"] == "websites") {
         $example = [
             "lularoe.com" => "0680b520-0252-440f-953c-fcec27740a45",
@@ -64,11 +70,19 @@ $app->get('/v0/offenders/{site}', function (Request $request, ResponseInterface 
             "offenders" => $example
         ];
         $response->getBody()->write(json_encode($example));
-        return $response->withHeader('Content-Type', 'application/json');
+        return $response->withStatus(200)
+            ->withHeader('Content-Type', 'application/json')
+            ->withHeader('Access-Control-Allow-Origin', '*')
+            ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
+            ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
     }
     $error = ["error" => "Site argument not recognized."];
     $response->getBody()->write(json_encode($error));
-    return $response->withHeader('Content-Type', 'application/json')->withStatus(404);
+    return $response->withStatus(404)
+        ->withHeader('Content-Type', 'application/json')
+        ->withHeader('Access-Control-Allow-Origin', '*')
+        ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
+        ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
 });
 
 $app->get('/v0/offender/{uuid}', function (Request $request, ResponseInterface $response, $args): ResponseInterface {
@@ -132,12 +146,20 @@ $app->get('/v0/offender/{uuid}', function (Request $request, ResponseInterface $
                 "offender" => $offender
             ];
             $response->getBody()->write(json_encode($example));
-            return $response->withHeader('Content-Type', 'application/json');
+            return $response->withStatus(200)
+                ->withHeader('Content-Type', 'application/json')
+                ->withHeader('Access-Control-Allow-Origin', '*')
+                ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
+                ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
         }
     }
     $error = ["error" => "UUID for offender not found."];
     $response->getBody()->write(json_encode($error));
-    return $response->withHeader('Content-Type', 'application/json')->withStatus(404);
+    return $response->withStatus(404)
+        ->withHeader('Content-Type', 'application/json')
+        ->withHeader('Access-Control-Allow-Origin', '*')
+        ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
+        ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
 });
 
 $app->run();

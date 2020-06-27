@@ -1,5 +1,5 @@
 if (window.location.hostname == "twitter.com") {
-  fetch("http://localhost:9090/offenders/twitter", {
+  fetch("http://localhost:9090/v0/offenders/twitter", {
     // mode: 'no-cors',
     method: 'GET',
     headers: {
@@ -13,11 +13,8 @@ if (window.location.hostname == "twitter.com") {
       });
     }
   });
-  fetch()
-    .then(response => response.json())
-    .then(json => console.log(json));
 } else {
-  fetch("http://localhost:9090/offenders/websites", {
+  fetch("http://localhost:9090/v0/offenders/websites", {
     // mode: 'no-cors',
     method: 'GET',
     headers: {

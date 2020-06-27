@@ -1,54 +1,55 @@
 openapi: 3.0.0
 info:
   title: prairiewatch.dog Public API
-  version: 1.0.0
+  version: 0.1.0
 servers:
   - url: https://api.prairiewatch.dog/v1
 paths:
-  /offenders:
-    /twitter:
+  /v0:
+    /offenders:
+      /twitter:
+        get:
+          summary: Returns a list of twitter handles associated with offenders.
+          responses:
+            '200':
+              description: An array of twitter handle strings.
+              content:
+                application/json:
+                  schema:
+                    type: array
+                    items:
+                      type: string
+      /websites:
+        get:
+          summary: Returns a list of website urls associated with offenders.
+          responses:
+            '200':
+              description: An array of website base url strings.
+              content:
+                application/json:
+                  schema:
+                    type: array
+                    items:
+                      type: string
+    /offender/{uuid}:
       get:
-        summary: Returns a list of twitter handles associated with offenders.
+        summary: Get details for a specific offender.
+        operationId: getOffender
+        parameters:
+          - name: uuid
+            in: path
+            description: An associated offender UUID.
+            required: true
+            schema:
+              type: string
+              format: uuid
         responses:
           '200':
-            description: An array of twitter handle strings.
+            description: Details for a specific offender.
             content:
               application/json:
                 schema:
-                  type: array
-                  items:
-                    type: string
-    /websites:
-      get:
-        summary: Returns a list of website urls associated with offenders.
-        responses:
-          '200':
-            description: An array of website base url strings.
-            content:
-              application/json:
-                schema:
-                  type: array
-                  items:
-                    type: string
-  /offender/{uuid}:
-    get:
-      summary: Get details for a specific offender.
-      operationId: getOffender
-      parameters:
-        - name: uuid
-          in: path
-          description: An associated offender UUID.
-          required: true
-          schema:
-            type: string
-            format: uuid
-      responses:
-        '200':
-          description: Details for a specific offender.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Offender'
+                  $ref: '#/components/schemas/Offender'
 
 components:
   schemas:

@@ -143,3 +143,24 @@ php -S localhost:8080 -t public public/index.php
 ```
 
 The URL is not secure, so API tests are against http://localhost:8080/offenders/twitter
+
+# Day 15 - June 26th, 2020
+### Time: 1.5 hours
+- Updated API error handling
+- Updated OpenAPI spec to match the refactored results
+- Added Makefile build shortcut
+- fetch() was returning `Unexpected end of JSON input`, and I falsely assumed that's because I needed to wrap the results like:
+```
+{
+  "offenders": [
+    {
+      "lularoe": "12345-12-12-123456"
+    }
+  ]
+}
+```
+(The spec has not been updated for this change)
+- The actual root cause is that CORS needs to be set up for these localhost calls: https://stackoverflow.com/questions/49974346/error-syntaxerror-unexpected-end-of-json-input-when-using-fetch
+  - I started following http://www.slimframework.com/docs/v4/cookbook/enable-cors.html but didn't get the initial attempt to work and will need greater brain power tomorrow
+
+Tomorrow, I should get CORS set up and then read up on better API design. I've changed the version of the API to 0.1.0 and v0 in the base URLs for the time being, even though this isn't live anyway. Starter reading: https://swagger.io/blog/api-design/api-design-best-practices/

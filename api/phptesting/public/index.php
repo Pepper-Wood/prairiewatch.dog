@@ -43,11 +43,15 @@ $customErrorHandler = function (
 $errorMiddleware = $app->addErrorMiddleware(true, true, true);
 $errorMiddleware->setDefaultErrorHandler($customErrorHandler);
 
-$app->get('/offenders/{site}', function (Request $request, ResponseInterface $response, $args): ResponseInterface {
+
+$app->get('/v0/offenders/{site}', function (Request $request, ResponseInterface $response, $args): ResponseInterface {
     if ($args["site"] == "twitter") {
         $example = [
-            "lularoe" => "0680b520-0252-440f-953c-fcec27740a45",
-            "noahbradley" => "4ed9aad9-a070-4fc4-9f9c-cfd87756e72d"
+            ["lularoe" => "0680b520-0252-440f-953c-fcec27740a45"],
+            ["noahbradley" => "4ed9aad9-a070-4fc4-9f9c-cfd87756e72d"]
+        ];
+        $example = [
+            "offenders" => $example
         ];
         $response->getBody()->write(json_encode($example));
         return $response->withHeader('Content-Type', 'application/json');
@@ -55,6 +59,9 @@ $app->get('/offenders/{site}', function (Request $request, ResponseInterface $re
         $example = [
             "lularoe.com" => "0680b520-0252-440f-953c-fcec27740a45",
             "noahbradley.com" => "4ed9aad9-a070-4fc4-9f9c-cfd87756e72d"
+        ];
+        $example = [
+            "offenders" => $example
         ];
         $response->getBody()->write(json_encode($example));
         return $response->withHeader('Content-Type', 'application/json');
@@ -64,7 +71,7 @@ $app->get('/offenders/{site}', function (Request $request, ResponseInterface $re
     return $response->withHeader('Content-Type', 'application/json')->withStatus(404);
 });
 
-$app->get('/offender/{uuid}', function (Request $request, ResponseInterface $response, $args): ResponseInterface {
+$app->get('/v0/offender/{uuid}', function (Request $request, ResponseInterface $response, $args): ResponseInterface {
     $offenders = [
         [
             "name" => "LuLaRoe",
@@ -121,7 +128,10 @@ $app->get('/offender/{uuid}', function (Request $request, ResponseInterface $res
     ];
     foreach ($offenders as $offender) {
         if ($offender["uuid"] == $args["uuid"]) {
-            $response->getBody()->write(json_encode($offender));
+            $example = [
+                "offender" => $offender
+            ];
+            $response->getBody()->write(json_encode($example));
             return $response->withHeader('Content-Type', 'application/json');
         }
     }

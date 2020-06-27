@@ -1,4 +1,9 @@
 if (window.location.hostname == "twitter.com") {
+  var links = [];
+  $('article a').each(function() {
+    links.push(this.href);
+  });
+  console.log(links);
   fetch("http://localhost:9090/v0/offenders/twitter", {
     // mode: 'no-cors',
     method: 'GET',

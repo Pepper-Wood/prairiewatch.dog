@@ -9,3 +9,6 @@ web-build:
 	cd ..
 	cp docs/index.html docs/404.html
 	printf "prairiewatch.dog" > docs/CNAME
+
+api-build:
+	cd api/phptesting && php -S localhost:8080 -t public public/index.php

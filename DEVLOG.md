@@ -166,7 +166,7 @@ The URL is not secure, so API tests are against http://localhost:8080/offenders/
 Tomorrow, I should get CORS set up and then read up on better API design. I've changed the version of the API to 0.1.0 and v0 in the base URLs for the time being, even though this isn't live anyway. Starter reading: https://swagger.io/blog/api-design/api-design-best-practices/
 
 # Day 16 - June 27th, 2020
-### Time: 5 hours
+### Time: 6.5 hours
 - Updated the API php file with CORS so the fetches now work as expected.
   - I got thrown for a loop just because I had added `/v0/` in front of the domains but didn't follow up with updating other references to these URLs in the extension and in my Postman.
 - Originally looked into BotSentinel's `background.js` for insight but instead downloaded https://github.com/jakubgarfield/extract-twitter-username-chrome to investigate possible solutions for detecting offenders on Twitter.
@@ -177,3 +177,5 @@ Tomorrow, I should get CORS set up and then read up on better API design. I've c
 Next steps are to put two and two together: the API results should first be what's informing what gets tagged, and then it's onto figuring out what these tags should say. Additionally, I'll have to look into caching strategies for these API results so I'm not fetching LuLaRoe's information every single time (along with caching the initial results of which users to tag).
 
 Or should this go the route of a generic tag like how Bot Sentinel has it, and the user has to click for it to load with the information? Read in the Bot Sentinel code that chrome's cache doesn't have a lot of available memory. I'm wondering how that'll play out.
+
+- Updated styling of how the tag shows up on Twitter. Still some styling tweaks I'd want to do to it. The banner with the full text gets the point across but is more appropriate when tagged to tweets vs. tagged to mentions in bios. I'm thinking of a little red icon that gives off signal waves for abbreviated use and also to add to the longer tag.

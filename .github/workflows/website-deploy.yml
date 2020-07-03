@@ -28,7 +28,7 @@ jobs:
     - name: Duplicate index.html to 404.html
       run: cp HEYO/index.html HEYO/404.html
     - name: Recreate CNAME
-      run: printf "prairiewatch.dog" > docs/CNAME
+      run: printf "prairiewatch.dog" > HEYO/CNAME
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:

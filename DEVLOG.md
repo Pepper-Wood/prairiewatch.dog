@@ -179,3 +179,45 @@ Next steps are to put two and two together: the API results should first be what
 Or should this go the route of a generic tag like how Bot Sentinel has it, and the user has to click for it to load with the information? Read in the Bot Sentinel code that chrome's cache doesn't have a lot of available memory. I'm wondering how that'll play out.
 
 - Updated styling of how the tag shows up on Twitter. Still some styling tweaks I'd want to do to it. The banner with the full text gets the point across but is more appropriate when tagged to tweets vs. tagged to mentions in bios. I'm thinking of a little red icon that gives off signal waves for abbreviated use and also to add to the longer tag.
+
+# Day 17 - June 28th, 2020; Day 18 - June 30th, 2020
+### Time: 6+ hours for the 17th, 8+ hours for the 18th
+PR encompasing both of these days: https://github.com/Pepper-Wood/prairiewatch.dog/pull/29
+
+Lost track of time, so I'm combining the two days. I took yesterday off because I ended up burning out from the work done over the weekend. I had a good time doing it; just got overloaded and needed to vibe.
+
+Because one of the Dependabot PRs merged in caused the tests to fail, I decided to expedite getting GitHub Actions set to up to automatically test the PRs. Encountered these problems and solutions:
+- **Problem:** ERROR in TypeError: tooling_1.constructorParametersDownlevelTransform is not a function (this is what the original `ng test` error was). **Solution**: https://stackoverflow.com/questions/62586650/constructorparametersdownleveltransform-is-not-a-function-in-angular
+- Used this repo as a reference for how I needed to update `npm test` and `npm e2e` setup to fix the other results: https://github.com/filipesilva/ng-github-actions
+- **Problem**: Module not found: Error: Can't resolve 'path' in '/project-name/node_modules/swagger-ui-dist'. **Solution**: https://github.com/swagger-api/swagger-ui/issues/4719
+
+There was also a whole rigamarole getting the GitHub Actions to only perform based on the files changed. There's a lot of actions available for tagging based on files changed paths (I'm using https://github.com/actions/labeler) but none that obviously pointed to setting up separate workflows for each of the repos. `push` events do not contain any information about the current PR, meaning that steps to:
+- get the PR number
+- make an API call to GitHub to get the labels attached
+- save this result as an artifact
+- in subsequent jobs, pull down this artifact
+- set up separate `if:` for all of the jobs based on this variable
+would all have to be put into one entire workflow file.
+
+The actual answer is that the `push` and `pull_request` actions (the latter of which is for PR related events like editting the description and adding labels, not commits in a PR) can be filtered on paths:
+```
+on:
+  push:
+    paths:
+    - 'api/**'
+```
+So now there's a separate workflow for each section. I'll definitely add more labels and actions for when Offenses' and Offenders' markdown files get added/updated.
+
+# Day 19 - July 1st, 2020
+### Time: 30min
+Shorter day today again, given work done yesterday and then over the weekend.
+- Renamed flows such that each repo has a `test.yml` file and eventually a `deploy.yml` file for these two build scenarios. Only `website-deploy.yml` exists at the moment.
+- Investigated what `website-deploy.yml` needs in order to run. Looking at these pages as a reference to check back on tomorrow:
+  - https://github.com/JamesIves/github-pages-deploy-action
+  - https://github.com/MichaelCurrin/code-cookbook/blob/20a73856cb3618b3f7ef166063745484313e1d74/recipes/ci-cd/github-actions/workflows/deploy-gh-pages/github-pages-deploy.md
+
+# Day 20 - July 2nd, 2020
+### Time: 6 hours
+Made up for lost time with more debugging the workflow for Angular website deployments.
+- Spent most of it trying to get https://github.com/AhsanAyaz/angular-deploy-gh-pages-actions to cooperate but kept running into separate issues (most of which were filed as issues). Abandoned when I was getting repeated 'rsync' failures without seeing an indication as to why I was running into it.
+- `wesite-deploy.yml` instead has steps that run the npm build command, replicated shell commands to copy index.html -> 404.html and to re-add the CNAME (there's definitely a way to store that in assets and pull that out instead, but for now it's going to echo "https://prairiewatch.dog" into a new file).

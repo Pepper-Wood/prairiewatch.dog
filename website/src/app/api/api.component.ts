@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-declare const SwaggerUIBundle: any;
+import { SwaggerUIBundle, SwaggerUIStandalonePreset } from 'swagger-ui-dist';
 
 @Component({
   selector: 'app-api',

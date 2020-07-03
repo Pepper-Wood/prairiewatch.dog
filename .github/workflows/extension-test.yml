@@ -1,0 +1,12 @@
+name: Extension Test Actions
+
+on:
+  push:
+    paths:
+    - 'extension/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "We are running the extension.yml workflow";

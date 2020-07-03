@@ -13,7 +13,7 @@ export class OffenseComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.post = './assets/offenses/' +  params['id'] + '.md';
+      this.post = './assets/offenses/' +  params.id + '.md';
     });
   }
 

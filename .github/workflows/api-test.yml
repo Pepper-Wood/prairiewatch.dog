@@ -1,0 +1,12 @@
+name: API Test Actions
+
+on:
+  push:
+    paths:
+    - 'api/**'
+
+jobs:
+  api_echo:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "We are running the api.yml workflow";

@@ -1,0 +1,36 @@
+name: Website Deploy Actions
+
+on:
+  push:
+    branches:
+    - master
+    paths:
+    - 'website/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install dependencies
+      run: npm install
+      working-directory: ./website
+    - name: Build
+      run: npm run build -- --prod
+      working-directory: ./website
+    - name: Duplicate index.html to 404.html
+      run: cp HEYO/index.html HEYO/404.html
+    - name: Recreate CNAME
+      run: printf "prairiewatch.dog" > docs/CNAME
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.PAT }}
+        publish_dir: ./HEYO

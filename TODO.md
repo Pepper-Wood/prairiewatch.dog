@@ -3,6 +3,8 @@ UUID generator: https://www.uuidgenerator.net/
 Figma mockup edit link: https://www.figma.com/file/K3bzNxMlhj7dKZos7wS6m3/prairiewatch.dog?node-id=0%3A1
 - https://usabilityhub.com/
 
+- TODO - address this checklist when the work is more fleshed out: https://github.com/zenika-open-source/promote-open-source-project
+- TODO - Use `exclamation` as seen here!! https://heroicons.dev/
 - The `extension/` directory should switch from this webpack template to a possible cross-browser solution based on the recently updated https://github.com/mdn/webextensions-examples
   - See the "Support for other browsers" for the link to the polyfill that will be needed to get this to work on Chrome.
 - Tweak mockups.

@@ -221,3 +221,16 @@ Shorter day today again, given work done yesterday and then over the weekend.
 Made up for lost time with more debugging the workflow for Angular website deployments.
 - Spent most of it trying to get https://github.com/AhsanAyaz/angular-deploy-gh-pages-actions to cooperate but kept running into separate issues (most of which were filed as issues). Abandoned when I was getting repeated 'rsync' failures without seeing an indication as to why I was running into it.
 - `wesite-deploy.yml` instead has steps that run the npm build command, replicated shell commands to copy index.html -> 404.html and to re-add the CNAME (there's definitely a way to store that in assets and pull that out instead, but for now it's going to echo "https://prairiewatch.dog" into a new file).
+
+# Day 21 - July 3rd, 2020
+### Time: 2.5 hour
+Migrated notes from TODO:
+- UUID generator: https://www.uuidgenerator.net/
+- Figma mockup edit link: https://www.figma.com/file/K3bzNxMlhj7dKZos7wS6m3/prairiewatch.dog?node-id=0%3A1
+- UserCrowd: https://usabilityhub.com/
+
+- Made a Trello board: https://trello.com/b/FqAaWnbE/prairiewatchdog
+  - Eventually, I'll migrate to using GitHub's project board. For now, I want something that doesn't eat up the issue numbers and messes me up with lots of tasks that are more set in stone.
+  - I made this due to feeling... a bit aimless after finally getting the website part of the GitHub Actions set up. I'm not sure where I should focus the next steps.
+- Migrated the listing in TODO to there.
+- Tried figuring out how to structure the data in this database. I think next steps should be that I start to populate more of it so I get a better grasp of scaling and connecting all the parts.

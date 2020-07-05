@@ -1,5 +1,12 @@
 ---
+uuid: 0680b520-0252-440f-953c-fcec27740a45
 name: LuLaRoe
+social_media:
+  twitter:
+    user_id: 1586844356
+    handle: lularoe
+  websites:
+    - lularoe.com
 counts:
   - name: multi-level-marketing
     type: x

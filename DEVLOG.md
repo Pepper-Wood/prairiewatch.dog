@@ -234,3 +234,19 @@ Migrated notes from TODO:
   - I made this due to feeling... a bit aimless after finally getting the website part of the GitHub Actions set up. I'm not sure where I should focus the next steps.
 - Migrated the listing in TODO to there.
 - Tried figuring out how to structure the data in this database. I think next steps should be that I start to populate more of it so I get a better grasp of scaling and connecting all the parts.
+
+# Day 22 - July 4th, 2020
+### Time: 2 hours
+Spent time on-and-off rearranging the API folder and trying to add in https://sleekdb.github.io/:
+
+> SleekDB - A NoSQL Database made using PHP
+
+I'm writing this devlog the next day, and I've come to the conclusion it's not necessarily suited for what I'm thinking of setting up. I was hoping that the structure that the SleekDB results in would be easy for transferring between a `database/` folder to the JSON database structure. However, realizing that the resulting JSON is flattened and hidden as `1.json` and also has other structures that get generated, I don't think it's possible to edit those files directly in a way that's user-friendly for now.
+
+Re-looked at up-for-grabs.net's database - my initial inspiration - where each offender would be stored as a separate yaml file. My plan would be something like:
+- `database/offenders/` contains separate yml files for each culprit. Maybe they have to be named with the UUID? Maybe the filename is a slug that gets ignored or just used for URL purposes?
+- The yaml files are somehow transformed into the needed database store for the PHP API.
+- `database/offenses/` contains markdown files pertaining to the offenses that can be listed. Maybe they should be yaml just for consistency, but I'm not sure.
+
+# Day 23 - July 5th, 2020
+### Time: ?

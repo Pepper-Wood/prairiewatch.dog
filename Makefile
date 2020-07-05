@@ -11,4 +11,4 @@ web-build:
 	printf "prairiewatch.dog" > docs/CNAME
 
 api-build:
-	cd api/phptesting && php -S localhost:9090 -t public public/index.php
+	cd api && php -S localhost:9090 -t public public/index.php

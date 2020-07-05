@@ -4,7 +4,6 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\Factory\AppFactory;
 use Slim\Psr7\Response;
-use SleekDB\SleekDB;
 
 $app->get('/v0/offender/{uuid}', function (Request $request, ResponseInterface $response, $args): ResponseInterface {
   $offenders = [

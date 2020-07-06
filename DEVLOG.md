@@ -249,22 +249,31 @@ Re-looked at up-for-grabs.net's database - my initial inspiration - where each o
 - `database/offenses/` contains markdown files pertaining to the offenses that can be listed. Maybe they should be yaml just for consistency, but I'm not sure.
 
 # Day 23 - July 5th, 2020
-### Time: ?
+### Time: 3 hours
+Another scattered day. Tomorrow, I'm going to try to have the time spaced out and follow pomodoros again so that I'm getting accurate hours instead of on-again-off-again working on this.
+
+Read these pages and refactored the API Spec to follow these guidelines:
 - https://swagger.io/blog/api-design/api-design-best-practices/
 - https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
 - https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/
 - https://www.merixstudio.com/blog/best-practices-rest-api-development/
 
-https://api.prairiewatch.dog/v0/offenders?twitter=pepper__wood,lularoe
-https://api.prairiewatch.dog/v0/offenders?url=https%3A%2F%2Fwww.redbubble.com%2Fi%2Ft-shirt%2FQuarantine-Frog-6-feet-apart-or-6-feet-under-this-is-a-threat-by-ReBoxxen%2F49299215.IJ6L0.XYZ
+Result:
+- GET /offenders with provided twitter and url parameters will return offender entries that match the criteria, empty array if there are no matches
+  - GET https://api.prairiewatch.dog/v0/offenders?twitter=pepper__wood,lularoe
+  - GET https://api.prairiewatch.dog/v0/offenders?url=https%3A%2F%2Fwww.redbubble.com%2Fi%2Ft-shirt%2FQuarantine-Frog-6-feet-apart-or-6-feet-under-this-is-a-threat-by-ReBoxxen%2F49299215.IJ6L0.XYZ
+- GET /offenders/{uuid} returns the offender information
+  - GET https://api.prairiewatch.dog/v0/offenders/4ed9aad9-a070-4fc4-9f9c-cfd87756e72d
+- I added but then removed this spec: GET /offenders/{uuid}/counts would only return the counts, but this should be how the GET /offenders result is returned.
 
-https://api.prairiewatch.dog/v0/offenders/4ed9aad9-a070-4fc4-9f9c-cfd87756e72d/counts
-
-
+Errors should be restructured as:
 {
   "error": {
     "status": 404,
-    "type": "OAuthException",
     "message": "heyo"
   }
 }
+
+These calls are making file_get_contents() to the hosted GitHub yml files. For now, when an entry is added, a row for the websites and social media listings will need to be manually updated and tagged with the UUID for the offender.
+
+The API needs to be refactored to make use of classes. There's a good amount of repeat code that should be simplified where the `index.php` has the list of API calls made and that fetches from some other class. We also need a folder for cron and a way to update the twitter handle listing based on user_id.

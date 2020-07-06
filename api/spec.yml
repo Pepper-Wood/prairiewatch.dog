@@ -53,29 +53,6 @@ paths:
                 application/json:
                   schema:
                     $ref: '#/components/schemas/Offender'
-        /counts:
-          get:
-            summary: Retrieves an offender's counts by UUID.
-            operationId: getOffenderCounts
-            parameters:
-              - name: uuid
-                in: path
-                description: The UUID of the offender.
-                required: true
-                schema:
-                  type: string
-                  format: uuid
-            responses:
-              '200':
-                description: Offender's counts.
-                content:
-                  application/json:
-                    type: object
-                    properties:
-                      counts:
-                        type: array
-                        items:
-                        $ref: '#/components/schemas/Count'
 
 components:
   schemas:

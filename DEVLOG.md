@@ -250,3 +250,21 @@ Re-looked at up-for-grabs.net's database - my initial inspiration - where each o
 
 # Day 23 - July 5th, 2020
 ### Time: ?
+- https://swagger.io/blog/api-design/api-design-best-practices/
+- https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
+- https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/
+- https://www.merixstudio.com/blog/best-practices-rest-api-development/
+
+https://api.prairiewatch.dog/v0/offenders?twitter=pepper__wood,lularoe
+https://api.prairiewatch.dog/v0/offenders?url=https%3A%2F%2Fwww.redbubble.com%2Fi%2Ft-shirt%2FQuarantine-Frog-6-feet-apart-or-6-feet-under-this-is-a-threat-by-ReBoxxen%2F49299215.IJ6L0.XYZ
+
+https://api.prairiewatch.dog/v0/offenders/4ed9aad9-a070-4fc4-9f9c-cfd87756e72d/counts
+
+
+{
+  "error": {
+    "status": 404,
+    "type": "OAuthException",
+    "message": "heyo"
+  }
+}

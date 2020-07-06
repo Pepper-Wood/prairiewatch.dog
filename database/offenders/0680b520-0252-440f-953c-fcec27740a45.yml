@@ -10,6 +10,7 @@ social_media:
 counts:
   - name: multi-level-marketing
     type: x
+    subtype: x
     source:
       url: https://s3-us-west-2.amazonaws.com/llrprod/exigo/llrAdmin/documents/LLR_Ldr_Bonus_Plan.pdf
       archive_url: https://www.google.com

@@ -1,55 +1,81 @@
 openapi: 3.0.0
 info:
   title: prairiewatch.dog Public API
-  version: 0.1.0
+  version: 0.2.0
 servers:
-  - url: https://api.prairiewatch.dog/v1
+  - url: https://api.prairiewatch.dog/v0
 paths:
   /v0:
     /offenders:
-      /twitter:
-        get:
-          summary: Returns a list of twitter handles associated with offenders.
-          responses:
-            '200':
-              description: An array of twitter handle strings.
-              content:
-                application/json:
-                  schema:
-                    type: array
-                    items:
-                      type: string
-      /websites:
-        get:
-          summary: Returns a list of website urls associated with offenders.
-          responses:
-            '200':
-              description: An array of website base url strings.
-              content:
-                application/json:
-                  schema:
-                    type: array
-                    items:
-                      type: string
-    /offender/{uuid}:
       get:
-        summary: Get details for a specific offender.
-        operationId: getOffender
-        parameters:
-          - name: uuid
-            in: path
-            description: An associated offender UUID.
-            required: true
-            schema:
-              type: string
-              format: uuid
+        summary: Retrieves a list of offenders based on passed-in identifiers.
+        operationId: checkOffenders
+          parameters:
+            - name: twitter
+              in: path
+              description: A comma-deliniated list of twitter handles.
+              required: false
+              schema:
+                type: string
+            - name: url
+              in: path
+              description: A URL-encoded URL.
+              required: false
+              schema:
+                type: string
         responses:
           '200':
-            description: Details for a specific offender.
+            description: An array of offender details.
             content:
               application/json:
+                type: object
+                properties:
+                  offenders:
+                    type: array
+                    items:
+                    $ref: '#/components/schemas/Offender'
+      /{uuid}:
+        get:
+          summary: Retrieves an offender by UUID.
+          operationId: getOffender
+          parameters:
+            - name: uuid
+              in: path
+              description: The UUID of the offender.
+              required: true
+              schema:
+                type: string
+                format: uuid
+          responses:
+            '200':
+              description: Offender details.
+              content:
+                application/json:
+                  schema:
+                    $ref: '#/components/schemas/Offender'
+        /counts:
+          get:
+            summary: Retrieves an offender's counts by UUID.
+            operationId: getOffenderCounts
+            parameters:
+              - name: uuid
+                in: path
+                description: The UUID of the offender.
+                required: true
                 schema:
-                  $ref: '#/components/schemas/Offender'
+                  type: string
+                  format: uuid
+            responses:
+              '200':
+                description: Offender's counts.
+                content:
+                  application/json:
+                    type: object
+                    properties:
+                      counts:
+                        type: array
+                        items:
+                        $ref: '#/components/schemas/Count'
 
 components:
   schemas:
@@ -67,11 +93,11 @@ components:
         counts:
           type: array
           items:
-            $ref: '#/components/schemas/Offense'
+            $ref: '#/components/schemas/Count'
         social_media:
           $ref: '#/components/schemas/SocialMedia'
 
-    Offense:
+    Count:
       type: object
       required:
         - name
@@ -79,7 +105,7 @@ components:
         - source
         - body
       properties:
-        category:
+        type:
           type: string
         subtype:
           type: string
@@ -95,12 +121,12 @@ components:
       properties:
         url:
           type: string
-        incident_timestamp:
-          type: integer
-          format: int32
-        reported_timestamp:
-          type: integer
-          format: int32
+        archive_url:
+          type: string
+        incident_time:
+          type: string
+        reported_time:
+          type: string
         type:
           type: string
 
@@ -108,15 +134,17 @@ components:
       type: object
       properties:
         twitter:
-          type: object
-          required:
-            - user_id
-            - handle
-          properties:
-            user_id:
-              type: integer
-            handle:
-              type: string
+          type: array
+          items:
+            type: object
+            required:
+              - user_id
+              - handle
+            properties:
+              user_id:
+                type: integer
+              handle:
+                type: string
         websites:
           type: array
           items:

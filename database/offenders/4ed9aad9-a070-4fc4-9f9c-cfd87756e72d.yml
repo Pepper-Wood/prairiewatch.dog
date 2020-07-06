@@ -9,6 +9,7 @@ social_media:
     - noahbradley.com
 counts:
   - category: rapist
+    type: x
     subtype: x
     source:
       url: https://twitter.com/DaniHartel/status/1275441880868634630

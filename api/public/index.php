@@ -33,7 +33,7 @@ $errorMiddleware = $app->addErrorMiddleware(true, true, true);
 
 $errorMiddleware->setDefaultErrorHandler($customErrorHandler);
 
+require 'routes/checkOffenders.php';
 require 'routes/getOffender.php';
-require 'routes/getOffenders.php';
 
 $app->run();

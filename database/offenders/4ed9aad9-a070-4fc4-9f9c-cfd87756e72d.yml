@@ -3,8 +3,8 @@ uuid: 4ed9aad9-a070-4fc4-9f9c-cfd87756e72d
 name: Noah Bradley
 social_media:
   twitter:
-    user_id: 14428486
-    handle: noahbradley
+    - user_id: 14428486
+      handle: noahbradley
   websites:
     - noahbradley.com
 counts:

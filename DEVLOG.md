@@ -277,3 +277,8 @@ Errors should be restructured as:
 These calls are making file_get_contents() to the hosted GitHub yml files. For now, when an entry is added, a row for the websites and social media listings will need to be manually updated and tagged with the UUID for the offender.
 
 The API needs to be refactored to make use of classes. There's a good amount of repeat code that should be simplified where the `index.php` has the list of API calls made and that fetches from some other class. We also need a folder for cron and a way to update the twitter handle listing based on user_id.
+
+# Day 24 - July 6th, 2020
+### Time: 1.5 hours
+https://json-schema-everywhere.github.io/yaml recommended to use http://rx.codesimply.com/ for YAML validation, but the PHP repo hasn't been updated in 8 years.
+

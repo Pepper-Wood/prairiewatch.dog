@@ -1,4 +1,5 @@
 "📡 API": api/*
+"📕 Database": database/*
 "🧩 Extension": extension/*
 "🌐 Website": website/*
 "🐙 Meta":

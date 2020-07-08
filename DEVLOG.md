@@ -291,3 +291,7 @@ https://json-schema-everywhere.github.io/yaml recommended to use http://rx.codes
 Wow, 25% of the way there 🎉 Don't know if this is cause to celebrate; I don't have a timeline for expected features coming out, so this doesn't necessarily mean I'm 25% of the way done with setting up the functionality.
 
 Tried using https://github.com/23andMe/Yamale to get that set up. There doesn't seem to be a way for array results. I have the regexes set up for the UUID v4 and the atomic date string format.
+
+# Day 26 - July 8th, 2020
+### Time: 1.5 hours
+- Based on yesterday's notes, I sat down and figured out roughly what steps will be needed to complete "Phase 1" in my mind, which should set up the basic parts of the monorepo in order for the chrome extension to tag users on Websites and Twitter.

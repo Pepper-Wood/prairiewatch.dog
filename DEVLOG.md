@@ -280,5 +280,14 @@ The API needs to be refactored to make use of classes. There's a good amount of 
 
 # Day 24 - July 6th, 2020
 ### Time: 1.5 hours
+- Set up potential PHP cron files for assembling the other JSON data structures:
+  - `api/private/regenerateDatabase.php`
+  - `api/private/validateOffenders.php`
+
 https://json-schema-everywhere.github.io/yaml recommended to use http://rx.codesimply.com/ for YAML validation, but the PHP repo hasn't been updated in 8 years.
 
+# Day 25 - July 7th, 2020
+### Time: 1 hour
+Wow, 25% of the way there 🎉 Don't know if this is cause to celebrate; I don't have a timeline for expected features coming out, so this doesn't necessarily mean I'm 25% of the way done with setting up the functionality.
+
+Tried using https://github.com/23andMe/Yamale to get that set up. There doesn't seem to be a way for array results. I have the regexes set up for the UUID v4 and the atomic date string format.

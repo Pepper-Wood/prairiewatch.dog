@@ -293,5 +293,21 @@ Wow, 25% of the way there 🎉 Don't know if this is cause to celebrate; I don't
 Tried using https://github.com/23andMe/Yamale to get that set up. There doesn't seem to be a way for array results. I have the regexes set up for the UUID v4 and the atomic date string format.
 
 # Day 26 - July 8th, 2020
-### Time: 1.5 hours
-- Based on yesterday's notes, I sat down and figured out roughly what steps will be needed to complete "Phase 1" in my mind, which should set up the basic parts of the monorepo in order for the chrome extension to tag users on Websites and Twitter.
+### Time: 4 hours 15 minutes
+- Done: (1.5 hours) Based on yesterday's notes, I sat down and figured out roughly what steps will be needed to complete "Phase 1" in my mind, which should set up the basic parts of the monorepo in order for the chrome extension to tag users on Websites and Twitter.
+- Done: Create label filtering for "database"
+- Done: (1 pomodoro + 15min) Research standardized way to archive links and add that to the structure
+- (1 pomodoro) Meandered with trying to update the PHP part of https://github.com/rjbs/Rx before realizing that there's more work for revitalizing this than I will dedicate. The PHP work is from 2012, and I'm not confident enough in my own PHP skills to modernize it and remove the deprecated calls. Because the YAML validator is a part of the GitHub Actions process and not bound to a framework, I will find whatever is most complete and run it in the GHA container.
+- IN PROGRESS: (4 pomodoros) Add GitHub Action for validating the schema for offender files
+  - Spent over an hour getting https://hitchdev.com/strictyaml, but it's not satisfactory due to yaml validating failing at the first error and stopping (vs. checking the whole file and reporting back)
+  - Found 2 github actions in the marketplace as alternatives:
+    - `yaml-lint`: https://github.com/marketplace/actions/yaml-lint
+    - `yaml-validate`: https://github.com/JKarwatka/validate-yaml-schema-action
+      - This uses https://github.com/ketanTechracers/schema-validator under the hood, which uses https://github.com/eivindfjeldstad/validate under the hood
+      - `schema-validator` is not up to the level of detail I need. I can only specify really if fields are strings and required, but I want to also ensure that regex validation is also checked
+      - `validate` does have the option for regex validation, but I've continuously run into `ERROR : RangeError: Maximum call stack size exceeded` errors without line numbers. This might be a result of trying to run the below (validateSchema is from `schema-validator` and is checking a yml file against a Schema() obj), and the file/object types are clashing:
+```js
+validateSchema('small-test.yml', {
+  schemaObj: user
+})
+```

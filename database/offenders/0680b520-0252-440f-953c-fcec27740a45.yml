@@ -4,16 +4,41 @@ name: LuLaRoe
 social_media:
   twitter:
     - user_id: 1586844356
-      handle: lularoe
+      handle: LuLaRoe
+    - user_id: 809796269677768704
+      handle: LuLaRoeSupport
   websites:
     - lularoe.com
 counts:
-  - name: multi-level-marketing
-    type: x
-    subtype: x
+  - class: multi-level-marketing
+    category: C
     source:
-      url: https://s3-us-west-2.amazonaws.com/llrprod/exigo/llrAdmin/documents/LLR_Ldr_Bonus_Plan.pdf
-      archive_url: https://www.google.com
-      date: Wed, 15 Apr 2020 22:59:58 GMT (according to Last Modified header on file)
-      type: company
-    body: <p>LuLaRoe utilizes a rank-based distributor bonus compensation plan. The business plan also details requirements for each rank based on the profit totals and number of LuLaRoe clothing articles sold. </p><p>The ranks also require the following distributor recruitments (For all the numbers listed below, these goals are to be met at minimum, i.e. Sponsor requires to recruit <em>at least</em> 1 new distributor and not <em>exactly</em>):</p><p>Sponsor</p><ul><li>Recruit 1 new distributor each month</li></ul><p>Trainer</p><ul><li>Recruit 3 new distributors each month</li><li>Maintain 10 distributors in your downline</li></ul><p>Coach</p><ul><li>Recruit new distributors each month</li><li>Maintain 10 distributors in your downline, where 3 are rank Trainer or above</li></ul><p>Mentor</p><ul><li>Recruit 3 new distributors each month</li><li>Maintain 6 distributors in your immediate downline, where 3 are rank Coach and the rest are rank Trainer or above.</li></ul><p>Ambassador</p><ul><li>Recruit 3 new distributors each month</li><li>Maintain 15 distributors in your immediate downline, where 10 are rank Mentor and the rest are rank Coach or above.</li></ul>
+      live_url: https://s3-us-west-2.amazonaws.com/llrprod/exigo/llrAdmin/documents/LLR_Ldr_Bonus_Plan.pdf
+      # source is a pdf and cannot be archived
+      archive_url: https://s3-us-west-2.amazonaws.com/llrprod/exigo/llrAdmin/documents/LLR_Ldr_Bonus_Plan.pdf
+      # Timestamp based on "Last Modified" header on the file
+      incident_time: "2020-04-15T22:59:58+00:00"
+      reported_time: "2020-04-15T22:59:58+00:00"
+      type: internal company documentation
+    summary: >
+      LuLaRoe utilizes a rank-based distributor bonus compensation plan. The business plan also details requirements for each rank based on the profit totals and number of LuLaRoe clothing articles sold.
+      The ranks also require the following distributor recruitments (For all the numbers listed below, these goals are to be met at minimum, i.e. Sponsor requires to recruit at least 1 new distributor and not exactly):
+
+      Sponsor
+      - Recruit 1 new distributor each month
+      
+      Trainer
+      - Recruit 3 new distributors each month
+      - Maintain 10 distributors in your downline
+      
+      Coach
+      - Recruit new distributors each month
+      - Maintain 10 distributors in your downline, where 3 are rank Trainer or above
+      
+      Mentor
+      - Recruit 3 new distributors each month
+      - Maintain 6 distributors in your immediate downline, where 3 are rank Coach and the rest are rank Trainer or above.
+      
+      Ambassador
+      - Recruit 3 new distributors each month
+      - Maintain 15 distributors in your immediate downline, where 10 are rank Mentor and the rest are rank Coach or above.

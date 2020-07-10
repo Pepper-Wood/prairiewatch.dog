@@ -1,0 +1,26 @@
+---
+uuid: 10031450-64dd-49dc-8f04-c5a2338b8b6f
+name: Example Valid Offender YAML
+social_media:
+  twitter:
+    - user_id: 12345678
+      handle: exampletwitter
+  websites:
+    - example.com
+counts:
+  - class: exampleclass
+    category: A
+    source:
+      live_url: https://twitter.com/examplevictim/status/1234567890
+      archive_url: https://tweetsave.com/examplevictim/status/1234567890
+      incident_time: "2016-10-22T14:23:12+00:00"
+      reported_time: "2016-10-22T14:23:12+00:00"
+      type: first-hand account
+    summary: >
+      Multi-line string summary of what the source link demonstrates.
+    response:
+      live_url: https://twitter.com/exampletwitter/status/1234567890
+      archive_url: https://tweetsave.com/exampletwitter/status/1234567890
+      response_time: "2016-10-22T14:23:12+00:00"
+      summary: >
+        Multi-line string summary of what the response link demonstrates.

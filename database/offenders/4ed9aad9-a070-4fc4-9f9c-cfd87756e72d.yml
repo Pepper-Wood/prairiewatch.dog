@@ -8,12 +8,13 @@ social_media:
   websites:
     - noahbradley.com
 counts:
-  - category: rapist
-    type: x
-    subtype: x
+  - class: sexual-assault-and-rape
+    category: C
     source:
-      url: https://twitter.com/DaniHartel/status/1275441880868634630
-      incident_time: "10:53 AM · Jun 23, 2020"
-      reported_time: "before that"
-      type: first-hand account
-    body: Victim came forward with an accusation against Noah Bradley's predatory behavior.
+      live_url: https://twitter.com/noahbradley/status/1274670378296774658
+      archive_url: https://tweetsave.com/noahbradley/status/1274670378296774658
+      incident_time: "2020-06-21T11:47:00+00:00"
+      reported_time: "2020-06-21T11:47:00+00:00"
+      type: offender apology
+    summary: >
+      Noah Bradley posted a tweet featuring an apology and an admittance to past behaviors. "I was terrible to women." "I preyed on them. I ceaselessly hit on them. I pressured them into sex. I got too drunk and did all manner of dumb things. Yes, I was one of those shitty, creepy sexual predators you hear about." The confession "pressured them into sex" specifically admits to rape.

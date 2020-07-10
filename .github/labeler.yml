@@ -1,7 +1,7 @@
-"📡 API": api/*
-"📕 Database": database/*
-"🧩 Extension": extension/*
-"🌐 Website": website/*
+"📡 API": api/**/*
+"📕 Database": database/**/*
+"🧩 Extension": extension/**/*
+"🌐 Website": website/**/*
 "🐙 Meta":
-- .github/*
+- .github/**/*
 - ./*

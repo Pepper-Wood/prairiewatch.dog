@@ -12,7 +12,7 @@ Other common qualities of an MLM, though these do not fall under offenses:
 - Distributors are encouraged to reach out to their friends and family for sales and recruitment
 - Distributors may purport to be "small business owners" and are encouraged to "be their own boss".
 
-## Types of Offenses
+## Offense Categories
 
 ### A. The company's income disclosure information indicates the majority of revenue for distributors comes from recruitment.
 If the majority of distributors within a company or the company itself make more than 50% of their profits through recruitment over selling product.
@@ -26,4 +26,4 @@ If rising up the "corporate ladder" requires hitting sale marks on a monthly or 
 
 ----
 
-[^1]: “Multi-Level Marketing Businesses and Pyramid Schemes.” Federal Trade Commission: Consumer Information, 3 Oct. 2019, www.consumer.ftc.gov/articles/0065-multi-level-marketing-businesses-and-pyramid-schemes.
+[^1]: "Multi-Level Marketing Businesses and Pyramid Schemes." Federal Trade Commission: Consumer Information, 3 Oct. 2019, www.consumer.ftc.gov/articles/0065-multi-level-marketing-businesses-and-pyramid-schemes.

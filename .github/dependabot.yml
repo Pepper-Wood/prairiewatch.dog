@@ -2,7 +2,7 @@ version: 2
 updates:
 
   - package-ecosystem: "npm"
-    directory: "/extension"
+    directory: "/.githug/yaml-validator"
     schedule:
       interval: "daily"
 

@@ -1,0 +1,26 @@
+name: API Deploy Actions
+
+on:
+  push:
+    branches:
+    - master
+    paths:
+    - 'api/**'
+
+jobs:
+  deploy:
+  - uses: actions/checkout@v2
+  - name: Checkout acquia-api branch
+    run: git checkout acquia-api
+  - name: Pull api folder from master into acquia-api
+    run: git checkout master -- api
+  - name: Remove .gitignore, composer.lock, and spec.yml
+    run: rm .gitignore composer.lock spec.yml
+    working-directory: ./api
+  - name: composer install
+    run: composer install
+    working-directory: ./api
+  - name: Replace docroot folder with current api folder contents
+    run: rm -rf docroot && mv api docroot
+  - name: Push acquia-api to acquia remote repo
+    run: git push kathryntest acquia-api:master

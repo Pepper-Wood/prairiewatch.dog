@@ -311,3 +311,10 @@ validateSchema('small-test.yml', {
   schemaObj: user
 })
 ```
+
+# Day 27 - July 9th, 2020
+### Time: 2.5 hours
+- Done: Add GitHub Action for validating the schema for offender files
+  - I conceded to https://github.com/ketanTechracers/schema-validator as the most complete validator for linting all issues with a file. It does not do regex validations (yet, maybe). I created another meta ticket based on an open issue that will allow parent fields to be marked optional but then allow their children to be required if the parent exists.
+- The 2 existing offenders had their listings updated to remove placeholder text, and I continued to update the text in the offenses listings. Despite seeing multiple tweets stating that a number of women came forward against Noah Bradley, I was not able to find any of their accounts from searching today. I have his own confession logged as a count, at the least.
+- Nice. This also closed out: "Standardize offender yaml structure. Touch up existing offenders."

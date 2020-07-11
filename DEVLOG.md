@@ -318,3 +318,18 @@ validateSchema('small-test.yml', {
   - I conceded to https://github.com/ketanTechracers/schema-validator as the most complete validator for linting all issues with a file. It does not do regex validations (yet, maybe). I created another meta ticket based on an open issue that will allow parent fields to be marked optional but then allow their children to be required if the parent exists.
 - The 2 existing offenders had their listings updated to remove placeholder text, and I continued to update the text in the offenses listings. Despite seeing multiple tweets stating that a number of women came forward against Noah Bradley, I was not able to find any of their accounts from searching today. I have his own confession logged as a count, at the least.
 - Nice. This also closed out: "Standardize offender yaml structure. Touch up existing offenders."
+
+# Day 28 - July 10th, 2020
+### Time: 2.5 hours
+
+Took some trial and error, but the @eekdipippo.dev site was able to run the current API code! No changes were made to this repo, but I'm planning for tomorrow to set up the automated process for /api deployment.
+
+
+# Day 29 - July 11th, 2020
+### Time: ???
+
+- Reference for pulling the API folder into the `acquia-api` branch https://stackoverflow.com/questions/17999851/git-copy-a-folder-from-master-branch-to-another-branch
+- Reference for pushing from origin:acquia-api to acquia:master https://stackoverflow.com/questions/5423517/how-do-i-push-a-local-git-branch-to-master-branch-in-the-remote
+
+- Ran `git remote add kathryntest git@github.com:Pepper-Wood/TestRemote.git` for testing with pushing to a remote without messing up the acquia remote history.
+

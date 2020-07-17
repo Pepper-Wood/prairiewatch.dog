@@ -47,7 +47,7 @@ $app->get('/', function (Request $request, ResponseInterface $response, $args): 
 
 $app->get('/v0/status', function (Request $request, ResponseInterface $response, $args): ResponseInterface {
     $example = [
-        "status" => "Success! API is up, and the automated deploy process works!"
+        "status" => "Success! API is up, and the automated deploy process works, maybe?"
     ];
     $response->getBody()->write(json_encode($example));
     return $response->withStatus(200)

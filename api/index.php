@@ -6,8 +6,6 @@ use Slim\Psr7\Response;
 
 require __DIR__ . '/vendor/autoload.php';
 
-// doot doot
-
 $app = AppFactory::create();
 
 $app->addRoutingMiddleware();
@@ -49,7 +47,7 @@ $app->get('/', function (Request $request, ResponseInterface $response, $args): 
 
 $app->get('/v0/status', function (Request $request, ResponseInterface $response, $args): ResponseInterface {
     $example = [
-        "status" => "Success! API is up!"
+        "status" => "Success! API is up, and the automated deploy process works!"
     ];
     $response->getBody()->write(json_encode($example));
     return $response->withStatus(200)

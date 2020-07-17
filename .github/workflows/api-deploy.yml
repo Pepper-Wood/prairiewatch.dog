@@ -12,17 +12,31 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Checkout acquia-api branch
-      run: git checkout acquia-api
+      with:
+        persist-credentials: false
+    - run: git fetch
+    - name: Checkout the acquia-api branchs
+      run: git checkout origin/acquia-api
     - name: Pull api folder from master into acquia-api
-      run: git checkout master -- api
+      run: git checkout origin/master -- api
     - name: Remove .gitignore, composer.lock, and spec.yml
       run: rm .gitignore composer.lock spec.yml
       working-directory: ./api
     - name: composer install
       run: composer install
       working-directory: ./api
-    - name: Replace docroot folder with current api folder contents
-      run: rm -rf docroot && mv api docroot
-    - name: Push acquia-api to acquia remote repo
-      run: git push kathryntest acquia-api:master
+    - run: rm -rf docroot
+    - run: mv api docroot
+    - run: git add .
+    - env:
+        COMMIT_SHA: ${{ github.sha }}
+        COMMIT_TITLE: ${{ github.event.commits[0].message }}
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "$COMMIT_TITLE ($COMMIT_SHA)"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        branch: acquia-api
+        github_token: ${{ secrets.PAT }}

@@ -99,7 +99,7 @@ URL for testing API call handling: https://jsonplaceholder.typicode.com/
 # Day 9 - June 18th, 2020
 ### Time: 3h, used 1 pomodoro
 
-Writing this summary 2 days later. I went down a rabbit hole to try again with setting up an angualr-based framework for the chrome extension. But after working with it for a while, I realize it'll be total overkill for what's needed. The angular part would make more sense if the UI the user navigates to is a browser-stored webpage. But since I'm using prairiewatch.dog instead, then it's not necessary. Totally basic, vanilla browser extension it is.
+Writing this summary 2 days later. I went down a rabbit hole to try again with setting up an angular-based framework for the chrome extension. But after working with it for a while, I realize it'll be total overkill for what's needed. The angular part would make more sense if the UI the user navigates to is a browser-stored webpage. But since I'm using prairiewatch.dog instead, then it's not necessary. Totally basic, vanilla browser extension it is.
 
 I added jQuery too and tried to set up an API call to GET https://jsonplaceholder.typicode.com/todos/1, but it fails with no error message printed.
 
@@ -109,7 +109,7 @@ I added jQuery too and tried to set up an API call to GET https://jsonplaceholde
 # Day 10 - June 20th, 2020
 ### Time: 2 hours
 
-Took yesterday as a day off. I'm and fully motivated today. Twitter has had a sudden trend of sexual assault victims coming forward. It's helped to push me to keep moving forward.
+Took yesterday as a day off. I'm back and fully motivated today. Twitter has had a sudden trend of sexual assault victims coming forward. It's helped to push me to keep moving forward.
 
 - I have a working demo for the chrome extension that fetches from a URL!! I realize now I need to build up an API more so that it could be more like:
 GET https://prairiewatch.dog/api/v1/search?type=twitter&q=LuLaRoe
@@ -322,14 +322,73 @@ validateSchema('small-test.yml', {
 # Day 28 - July 10th, 2020
 ### Time: 2.5 hours
 
-Took some trial and error, but the @eekdipippo.dev site was able to run the current API code! No changes were made to this repo, but I'm planning for tomorrow to set up the automated process for /api deployment.
-
+Took some trial and error, but the @eekdipippo.dev site was able to run the current API code when manually added! No changes were made to this repo, but I'm planning for tomorrow to set up the automated process for /api deployment.
 
 # Day 29 - July 11th, 2020
-### Time: ???
+### Time: 2 hours
 
+Time is an estimate, since this is an on-and-off development process vs. dedicating a pomodoro to dedicated implementation. The deployment process from a high level is as follows, where `acquia-api` branch is a replica of the remote git repo for eekdipippo:
+1. When a change occurs in the /api folder on `master`, copy the /api folder into the `acquia-api` branch
+  - This folder needs vendor committed into it, so delete the .gitignore, composer.lock files and run composer install
+  - Replace the existing docroot/ folder with the api/ folder by deleting the former and performing a rename
+2. Sync the contents of the `acquia-api` folder with the remote.
+
+Step 1 is currently functional, after trial and error with this process. Here were my notes and helpful reference:
 - Reference for pulling the API folder into the `acquia-api` branch https://stackoverflow.com/questions/17999851/git-copy-a-folder-from-master-branch-to-another-branch
 - Reference for pushing from origin:acquia-api to acquia:master https://stackoverflow.com/questions/5423517/how-do-i-push-a-local-git-branch-to-master-branch-in-the-remote
-
 - Ran `git remote add kathryntest git@github.com:Pepper-Wood/TestRemote.git` for testing with pushing to a remote without messing up the acquia remote history.
+- Hitting issues with checking out the folder on another branch were solved by downgrading the `actions/checkout` version to `v1`: https://github.com/actions/checkout/issues/296
 
+# Day 30 - July 12th, 2020
+### Time: 2 hours
+
+I tried to pomodoro this work to automate the API build process, but it's really just a steady cycle of trying out different GitHub Actions, toying with them, before changing to a new one if it doesn't work out.
+
+Step 2 defined in the previous day is still a work-in-progress. I tried using:
+- https://github.com/ad-m/github-push-action
+- https://github.com/wei/git-sync
+to perform this sync, but I've run into permissions issues.
+
+I did make a successful push to https://github.com/Pepper-Wood/TestRemote by using `git-sync`. However, this is just due to the remote also being hosted on GitHub and allowing me to use a personal access token for authentication. It may not be playing nicely with allowing the source to be an HTTPS basic auth URL while the destination is an SSH private key auth URL:
+```
+- name: repo-sync
+  uses: wei/git-sync@v2
+  with:
+    source_repo: "https://Pepper-Wood:${{ secrets.PAT }}@github.com/Pepper-Wood/prairiewatch.dog.git"
+    source_branch: "acquia-api"
+    destination_repo: "eekdipippo@srv-1234.prod.hosting.acquia.com:eekdipippo.git"
+    destination_branch: "master"
+    ssh_private_key: ${{ secrets.ACQUIA_PRIVATE_SSH }}
+```
+
+Tomorrow, I'm going to see if setting up Acquia Pipelines will be able to work to my benefit. Links to articles that will help:
+- High-level pipelines info: https://docs.acquia.com/acquia-cloud/develop/pipelines/
+- Creating pipelines file: https://docs.acquia.com/acquia-cloud/develop/pipelines/yaml/
+  - Example: https://docs.acquia.com/acquia-cloud/develop/pipelines/yaml/examples/#pipelines-yaml-general-example
+- Configure pipelines with your GitHub repository: https://docs.acquia.com/acquia-cloud/develop/pipelines/connect/github/
+  - Note: I don't see that "Configure" link appearing on this page yet. Wondering if there's a switch I need to do that.
+
+# Day 31 - July 13th, 2020
+### Time: 30 minutes + 4 hours writing
+
+- Enabled Acquia Pipelines on my account. That was super easy to just switch the Dev environment to look at the `pipelines-build-acquia-api` branch. Going to switch that to the Prod environment, merge in the `day-29` branch, and 
+
+Short time spent programming. I sat down and wrote my 30-day retrospective as a draft. I'm using a tool called slickwrite.com to proofread that I'm finding extremely helpful. I've separated the time as an accurate measure of what I'm spending programming vs. what I'm spending on retro.
+
+# Day 32 - July 14th, 2020
+### Time: 2 hours + 4 hours writing/drawing
+
+30-day retrospective is complete; lots of time spent editting my prose and then drawing a cover image. I'm definitely rusty, but it was fun! Back to programming again for the next 28 days before the next retro. One of my takeways was if I should resume timeboxing my days to prevent less burnout. For now, I'll play it by ear. Maybe the exchange is that I can't work longer than 3 hours, and I don't pressure myself to work more than 1 hour.
+
+Thought I would wrap up with the GitHub Actions API deployment work, but I wanted to see if I could withold from pushing to Acquia Pipelines except for merges to master. _Turns out_, the way that Acquia is currently detecting changes is via a Webhook that it generated in the repository's settings. I tried getting crafty by triggering a deployment event, but the Webhook responds with "only ping, push, and pull_request events are accepted".
+
+My current attempt is to configure a webhook step at the end of the api-deploy.yml that will behave the same way as the regular GitHub webhook. Thankfully, the UI shows what that payload is, which I believe is the same as the `${{ github }}` context provided in these events. My current struggle is flattening the JSON so the cURL properly injests it as a payload. Alternative is to create my own script to run the cURL that flattens the provided JSON.
+
+Moving the WIP one into here temporarily:
+```
+    - name: Acquia Webhook
+      uses: joelwmale/webhook-action@master
+      env:
+        WEBHOOK_URL: ${{ secrets.ACQUIA_WEBHOOK_URL }}
+        data: "${{ github }}"
+```

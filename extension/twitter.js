@@ -1,3 +1,5 @@
+console.log("PWD: TWITTER.JS");
+
 // TODO - rename to tagTwitterHandles()
 // TODO - replace references of "username" to "handle"
 function extractTwitterUsernames() {

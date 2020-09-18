@@ -2,6 +2,8 @@ name: Website Test Actions
 
 on:
   push:
+    branches:
+    - '!master'   # excludes master
     paths:
     - 'website/**'
 

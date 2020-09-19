@@ -1,6 +1,0 @@
-<IfModule mod_headers.c>
-  Header set Cache-Control "max-age=0"
-</IfModule>
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.php [QSA,L]

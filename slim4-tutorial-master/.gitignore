@@ -1,0 +1,12 @@
+build/
+vendor/
+.idea/
+.phpunit.result.cache
+
+!tmp/
+tmp/*
+!tmp/empty
+
+!logs/
+logs/*
+!logs/empty

@@ -392,3 +392,52 @@ Moving the WIP one into here temporarily:
         WEBHOOK_URL: ${{ secrets.ACQUIA_WEBHOOK_URL }}
         data: "${{ github }}"
 ```
+
+https://github.com/ehimennlab/Panopticon/tree/16e96b48af4a144e4e48c5ba98157ba875bcac75/src/rtmp
+
+Day 33 - ?
+
+July 15th took the day off
+
+# Day 33 - July 16th - July 18th
+### Time: 2 hours
+
+I took July 15th off and am writing this summary on July 19th. Right after I posted the blog, my motivation for working on this project hit pan. I took a breather by looking into how I can programmatically create notes on DeviantArt for another group. It was a fun excursion, but now I'm stuck in that "many thoughts, brain full" scenario of thinking about other projects I could be doing.
+
+I think part of the issue is that I'm a bit sick of troubleshooting GitHub Actions related issues. The Acquia Pipelines setup by doing the GitHub sync in the Acquia UI didn't work; it syncs the branch _before_ the GitHub Action workflow to push to that branch happens. I disabled it and created a follow-up Trello ticket to reinvestigate.
+
+I'm combining these days into 1 day because I feel that the work done was so minimal. I'm also still mentally struggling with that the 100 days means that the project should be completed, even though I still haven't sized the remaining effort.
+
+Annotated summary:
+- I found this repo that had a Controller-based structure with the Slim4 framework: https://github.com/ehimennlab/Panopticon/tree/16e96b48af4a144e4e48c5ba98157ba875bcac75/src/rtmp
+- I replicated this in the `api2/` folder and customized it with the calls I had working in `api/`
+- I wanted to look into how I would add testing before setting up Dependabot and found https://github.com/slimphp/Slim-Skeleton instead
+- I created `api3/` that just contains the Slim-Skeleton generation. This should be customized again with the work done previously, and the tests need to be updated.
+
+Needing another change-of-pace while I'm still facing whatever mental block is preventing me from wanting to resume, I created `OFFENSESQUEUE.md`, which contains the list of URLs and associated texts for all the offenses I've bookmarked on my feed. I also started `RESOURCESQUEUE.md` because a fair amount of additional links are about callouts, groomers on the internet, etc. with useful advice and insight not in particular about individuals.
+
+# Day 34 - July 19th
+### Time: 45min
+
+No work yet. I should timebox today's duties. I updated this DEVLOG after neglecting to do so for a couple of days. As an aside, Twitter showed me https://twitter.com/saucenaopls. I was most interested in https://twitter.com/KillSection/status/1284340206104186880?s=20 where the bot detects and flags against art theft. The repo for the @saucenaopls account is open source and has a snippet for generating that comment: https://github.com/FujiMakoto/twitter-saucenao/blob/a03df9842f68c166b3dcc98c904d245cbe66c922/twsaucenao/server.py#L401 My initial thoughts are to add the parent twitters as offenders, but I'm wondering if there should be a way to automate flags like this at a later point in time. This also reminded me of my prior ideas for flagging Dropshipping products against listings on Alibaba or Wish.
+
+# Day 35 - July 20th
+### Time: 1 hour 15 min
+
+More trial and error with setting up PHPUnit tests with the existing implementation. The `Slim-Skeleton` setup is too beefy for what I need. I found another smaller example at https://github.com/adriansuter/Slim4-CI. I found out the tests are actually querying the localhost when the PHP server is up. Because I can't do both at the same time, found this article: https://medium.com/@peter.lafferty/start-phps-built-in-web-server-from-phpunit-9571f38c5045
+
+I have yet to look up if there are existing GitHub Actions in the marketplace meant for this sort of thing.
+
+# Day 36 - July 22nd
+### Time: 1 hour 30 min
+
+My work on this is on-and-off as I'm struggling through two different main blockers, namely: setting up the proper framework for the API folder such that it's object-oriented and has PHPUnits set up so I can enable Dependabot. I'm also blocked on the GitHub Actions setup with pushing to the Acquia Git remote. Although, now that there's this refactor down the pipe, I'll have to re-investigate whether my current `acquia-api` branch layout will work in the same way.
+
+Had a rough sleep, so my current trial and error:
+- Helpful Slim4 tutorial, with results relating to the Skeleton but explained: https://odan.github.io/2019/11/05/slim4-tutorial.html
+- The resulting files from that tutorial in repo form: https://github.com/odan/slim4-tutorial
+  - This is what is currently downloaded in slim4-tutorial-master
+- I still think this is too much for what I want to set up, so I also looked into Laravel's Lumen: https://lumen.laravel.com/docs/7.x/installation
+- I ran the download steps to create a lumen skeleton. I am unsure whether the Laravel-related framework files will be able to run on Acquia. Maybe? I decided to just move forward with understanding Odan's Slim4 setup and work with that.
+
+Note to self: running `composer tests:coverage` shows that I don't have a coverage driver set up. This is supposedly because I haven't properly set up and pointed my XDebug locally. I'm thinking about avoiding this for now and just ensuring that there's a coverage driver in the GitHub actions that runs this.

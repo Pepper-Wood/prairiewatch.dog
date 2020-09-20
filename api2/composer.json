@@ -1,7 +1,0 @@
-{
-    "require": {
-        "slim/slim": "^4.4",
-        "slim/psr7": "^1.0",
-        "symfony/yaml": "^5.1"
-    }
-}

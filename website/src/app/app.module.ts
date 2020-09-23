@@ -5,14 +5,14 @@ import { MarkdownModule } from 'ngx-markdown';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EntryComponent } from './entry/entry.component';
+import { OffenderComponent } from './offender/offender.component';
 import { HomeComponent } from './home/home.component';
 import { OffenseComponent } from './offense/offense.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EntryComponent,
+    OffenderComponent,
     HomeComponent,
     OffenseComponent
   ],

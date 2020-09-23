@@ -1,11 +1,11 @@
 ---
-uuid: 0680b520-0252-440f-953c-fcec27740a45
+slug: lularoe
 name: LuLaRoe
 social_media:
   twitter:
-    - user_id: 1586844356
+    - id: 1586844356
       handle: LuLaRoe
-    - user_id: 809796269677768704
+    - id: 809796269677768704
       handle: LuLaRoeSupport
   websites:
     - lularoe.com

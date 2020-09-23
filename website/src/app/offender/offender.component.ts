@@ -7,11 +7,11 @@ import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-entry',
-  templateUrl: './entry.component.html',
-  styleUrls: ['./entry.component.css']
+  templateUrl: './offender.component.html',
+  styleUrls: ['./offender.component.css']
 })
-export class EntryComponent implements OnInit {
-  uuid;
+export class OffenderComponent implements OnInit {
+  slug;
   data;
 
   constructor(
@@ -21,7 +21,7 @@ export class EntryComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      this.uuid = params.get('id');
+      this.slug = params.get('slug');
       this.getJson().subscribe(data => {
         this.data = data;
         console.log(data);
@@ -30,8 +30,7 @@ export class EntryComponent implements OnInit {
   }
 
   public getJson(): Observable<any> {
-    // const url ='https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/master/database/offenders/' + this.uuid + '.yml';
-    const url = 'https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/6aff36609586939548ecc7c00192b69d1e08de93/database/offenders/0680b520-0252-440f-953c-fcec27740a45.yml';
+    const url = 'https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/master/data/offenders/' + this.slug + '.yml';
     return this.http.get(url, {
       observe: 'body',
       responseType: "text"   // This one here tells HttpClient to parse it as text, not as JSON

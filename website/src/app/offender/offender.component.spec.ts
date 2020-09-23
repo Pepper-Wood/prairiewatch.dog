@@ -1,15 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { EntryComponent } from './entry.component';
+import { OffenderComponent } from './offender.component';
 
-describe('EntryComponent', () => {
-  let component: EntryComponent;
-  let fixture: ComponentFixture<EntryComponent>;
+describe('OffenderComponent', () => {
+  let component: OffenderComponent;
+  let fixture: ComponentFixture<OffenderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EntryComponent ],
+      declarations: [ OffenderComponent ],
       imports: [
         RouterTestingModule
       ],
@@ -18,7 +18,7 @@ describe('EntryComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EntryComponent);
+    fixture = TestBed.createComponent(OffenderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

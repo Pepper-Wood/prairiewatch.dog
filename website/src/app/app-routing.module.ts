@@ -6,7 +6,7 @@ import { OffenseComponent } from './offense/offense.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: '/:slug', component: OffenderComponent },
+  { path: ':slug', component: OffenderComponent },
   { path: 'offenses/:id', component: OffenseComponent, pathMatch: 'full'}
 ];
 

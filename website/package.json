@@ -19,10 +19,10 @@
     "@angular/platform-browser": "~10.0.0-rc.5",
     "@angular/platform-browser-dynamic": "~10.0.0-rc.5",
     "@angular/router": "~10.0.0-rc.5",
-    "js-yaml": "^3.14.0",
     "ngx-markdown": "^10.1.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
+    "yamljs": "^0.3.0",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {
@@ -47,5 +47,10 @@
     "ts-node": "~9.0.0",
     "tslint": "~6.1.0",
     "typescript": "^3.9.7"
+  },
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false
   }
 }

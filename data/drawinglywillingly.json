@@ -1,0 +1,36 @@
+{
+  "name": "DrawinglyWillingly",
+  "social_media": {
+    "toyhouse": [
+      {
+        "user_id": 67459,
+        "handle": "DrawinglyWillingly"
+      },
+      {
+        "user_id": 111958,
+        "handle": "AlyssaB"
+      }
+    ],
+    "furaffinity": [
+      "Fufifox",
+      "DiamondPinkery",
+      "GeneralHeartlocke"
+    ],
+    "twitter": [
+      {
+        "user_id": 1184148466529951748,
+        "handle": "DrHeartlock"
+      },
+      {
+        "user_id": 1260749172984160263,
+        "handle": "DrUnlocked"
+      }
+    ],
+    "websites": [
+      "https://www.patreon.com/artbyheartlock",
+      "https://ko-fi.com/memelee",
+      "https://ych.commishes.com/user/Erenna/",
+      "https://www.twitch.tv/drheartlock"
+    ]
+  }
+}

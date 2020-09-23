@@ -1,8 +1,10 @@
-<p>entry works!</p>
-<h3>{{ uuid }}</h3>
-<div style="text-align:center">
-  <h1>
-    Welcome!
-  </h1>
-  <button (click)="getJson()">Fetch Json</button>
+<p>{{ data.uuid }}</p>
+<h1>{{ data.name }}</h1>
+<div *ngFor="let count of data.counts;">
+  <h2>{{ count.class }} | {{ count.category }}</h2>
+  <p class="angular-with-newlines">{{ count.summary }}</p>
+  <hr>
+  <markdown ngPreserveWhitespaces>
+    {{ count.summary }}
+  </markdown>
 </div>

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { HttpClient } from "@angular/common/http";
-import { jsyaml } from 'js-yaml';
+import { parse } from 'yamljs';
 import { map } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-entry',
@@ -11,7 +12,7 @@ import { map } from 'rxjs/operators';
 })
 export class EntryComponent implements OnInit {
   uuid;
-  private data:any = [];
+  data;
 
   constructor(
     private route: ActivatedRoute,
@@ -20,30 +21,24 @@ export class EntryComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      this.uuid = +params.get('uuid');
+      this.uuid = params.get('id');
+      this.getJson().subscribe(data => {
+        this.data = data;
+        console.log(data);
+      });
     });
   }
 
-  getJson() {
-    const url ='https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/master/database/generated/websites.json';
-    this.http.get(url).subscribe((res) => {
-      this.data = res;
-      console.log(this.data);
-    });
-  }
-
-  public getYaml() {
-    // THIS DOESN'T WORK. Switch the files to use JSON instead???
-    // The method instead should be to store the yaml files as one reference, convert that to JSON, and then have that pulled in here.
-    const url = 'https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/master/database/offenders/0680b520-0252-440f-953c-fcec27740a45.yml';
-    this.data = this.http.get(url, {
+  public getJson(): Observable<any> {
+    // const url ='https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/master/database/offenders/' + this.uuid + '.yml';
+    const url = 'https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/6aff36609586939548ecc7c00192b69d1e08de93/database/offenders/0680b520-0252-440f-953c-fcec27740a45.yml';
+    return this.http.get(url, {
       observe: 'body',
       responseType: "text"   // This one here tells HttpClient to parse it as text, not as JSON
     }).pipe(
       // Map Yaml to JavaScript Object
-      map(yamlString => jsyaml.load(yamlString))
+      map(yamlString => parse(yamlString))
     );
-    console.log(this.data);
   }
 
 }

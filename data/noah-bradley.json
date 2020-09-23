@@ -1,0 +1,29 @@
+{
+  "uuid": "4ed9aad9-a070-4fc4-9f9c-cfd87756e72d",
+  "name": "Noah Bradley",
+  "social_media": {
+    "twitter": [
+      {
+        "user_id": 14428486,
+        "handle": "noahbradley"
+      }
+    ],
+    "websites": [
+      "noahbradley.com"
+    ]
+  },
+  "counts": [
+    {
+      "class": "sexual-assault-and-rape",
+      "category": "C",
+      "source": {
+        "live_url": "https://twitter.com/noahbradley/status/1274670378296774658",
+        "archive_url": "https://tweetsave.com/noahbradley/status/1274670378296774658",
+        "incident_time": "2020-06-21T11:47:00+00:00",
+        "reported_time": "2020-06-21T11:47:00+00:00",
+        "type": "offender apology"
+      },
+      "summary": "Noah Bradley posted a tweet featuring an apology and an admittance to past behaviors. \"I was terrible to women.\" \"I preyed on them. I ceaselessly hit on them. I pressured them into sex. I got too drunk and did all manner of dumb things. Yes, I was one of those shitty, creepy sexual predators you hear about.\" The confession \"pressured them into sex\" specifically admits to rape."
+    }
+  ]
+}

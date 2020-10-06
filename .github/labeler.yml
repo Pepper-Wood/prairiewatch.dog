@@ -1,6 +1,6 @@
-"📡 API": api/**/*
-"📕 Database": database/**/*
+"📕 Data": data/**/*
 "🧩 Extension": extension/**/*
+"🐍 Scripts": scripts/**/*
 "🌐 Website": website/**/*
 "🐙 Meta":
 - .github/**/*

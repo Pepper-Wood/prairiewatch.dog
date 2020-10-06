@@ -30,7 +30,7 @@ class Offender:
             return result
         handles = self.body['social_media'][social_media]
         for handle in handles:
-            result[handle['handle']] = self.slug
+            result[handle['handle'].lower()] = self.slug
         return result
 
     def get_websites(self):
@@ -38,7 +38,7 @@ class Offender:
         if "websites" not in self.body['social_media'].keys():
             return result
         for url in self.body['social_media']['websites']:
-            result[url] = self.slug
+            result[url.lower()] = self.slug
         return result
 
     def get_counts(self):

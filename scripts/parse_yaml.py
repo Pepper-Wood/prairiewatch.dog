@@ -43,6 +43,12 @@ class Offender:
 
     def get_counts(self):
         return len(self.body['counts'])
+    
+    def get_slug(self):
+        return self.slug
+
+    def get_name(self):
+        return self.body['name']
 
 def yaml_to_dict(filename):
     """Returns a full file's contents as a Python dictionary.
@@ -84,6 +90,8 @@ if __name__ == "__main__":
     toyhouses = {}
     websites = {}
 
+    listing = {}
+
     stats = {
         "offenders": 0,
         "offenses": 0
@@ -97,7 +105,9 @@ if __name__ == "__main__":
         twitters = {**twitters, **offender.get_social_media_listings("twitter")}
         toyhouses = {**toyhouses, **offender.get_social_media_listings("toyhouse")}
         websites = {**websites, **offender.get_websites()}
-        
+
+        listing[offender.get_name()] = offender.get_slug()
+
         # Add to stats counters.
         stats["offenders"] += 1
         stats["offenses"] += offender.get_counts()
@@ -106,4 +116,5 @@ if __name__ == "__main__":
     save_to_json_file(twitters, "twitter")
     save_to_json_file(toyhouses, "toyhouse")
     save_to_json_file(websites, "websites")
+    save_to_json_file(listing, "listing")
     save_to_json_file(stats, "stats")

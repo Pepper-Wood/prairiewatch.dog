@@ -20,6 +20,11 @@
       "matches": ["*://toyhou.se/*"],
       "css": ["content.css"],
       "js": ["js/jquery-3.5.1.min.js", "toyhouse.js"]
+    },
+    {
+      "matches": ["<all_urls>"],
+      "css": ["content.css"],
+      "js": ["js/jquery-3.5.1.min.js", "websites.js"]
     }
   ]
 }

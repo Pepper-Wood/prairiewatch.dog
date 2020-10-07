@@ -1,19 +1,4 @@
-.twitter-card {
-  color: #FF0000;
-  background-color: #ffe6e6;
-  border-left: 5px solid #ff0000;
-  margin: 2px;
-  padding: 10px;
-  font-weight: bold;
-  font-size: 16px;
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06);
-}
-.twitter-card p {
-  margin: 0;
-}
-
-
-.pulse {
+.pwd-pulse {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -27,32 +12,65 @@
   text-align: center;
   margin: 0;
 }
-.pulse:hover {
+.pwd-pulse:hover {
   animation: none;
 }
 
 @-webkit-keyframes pulse {
   0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    -webkit-box-shadow: 0 0 0 0 rgba(244,67,54, 0.4);
   }
   70% {
-      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      -webkit-box-shadow: 0 0 0 10px rgba(244,67,54, 0);
   }
   100% {
-      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      -webkit-box-shadow: 0 0 0 0 rgba(244,67,54, 0);
   }
 }
 @keyframes pulse {
   0% {
-    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
-    box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    -moz-box-shadow: 0 0 0 0 rgba(244,67,54, 0.4);
+    box-shadow: 0 0 0 0 rgba(244,67,54, 0.4);
   }
   70% {
-      -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
-      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      -moz-box-shadow: 0 0 0 10px rgba(244,67,54, 0);
+      box-shadow: 0 0 0 10px rgba(244,67,54, 0);
   }
   100% {
-      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
-      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      -moz-box-shadow: 0 0 0 0 rgba(244,67,54, 0);
+      box-shadow: 0 0 0 0 rgba(244,67,54, 0);
   }
+}
+
+.pwd-header {
+  position: fixed;
+  top: 0;
+  z-index: 2147483647;
+  width: 100%;
+  align-items: center;
+  padding: 1em;
+  background-color: #f2b5b7;
+  color: #721c24;
+}
+
+.pwd-header .pwd-pulse {
+  margin-right: 0.5em;
+}
+
+.pwd-header a {
+  color: #721c24;
+  font-weight: bold;
+}
+
+.pwd-header-close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  opacity: .5;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  cursor: pointer;
 }

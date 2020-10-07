@@ -1,7 +1,7 @@
 console.log("PWD: TOYHOUSE.JS");
 
 function extractToyhouseHandle(url) {
-  handleMatch = url.match(/toyhou.se\/(?:@){0,1}([a-zA-Z0-9.-]*)/);
+  let handleMatch = url.match(/toyhou.se\/(?:@){0,1}([a-zA-Z0-9.-]*)/);
   if (handleMatch == null) {
     return null;
   }
@@ -13,7 +13,7 @@ function extractToyhouseHandle(url) {
 
 function tagToyhouseHandles(toyhouse_offenders) {
   $("a").each(function() {
-    handle = extractToyhouseHandle(this.href);
+    let handle = extractToyhouseHandle(this.href);
     if (handle == null) {
       return;
     }
@@ -22,12 +22,12 @@ function tagToyhouseHandles(toyhouse_offenders) {
       return;
     }
 
-    let thLink = toyhouse_offenders[handle];
-    $(this).after(`<a target='_blank' href='${thLink}' class="pulse">!</a>`);
+    let offender_slug = toyhouse_offenders[handle];
+    $(this).after(`<a target='_blank' href='https://prairiewatch.dog/${offender_slug}' class="pwd-pulse">!</a>`);
   });
 }
 
-// Retrieve offenders JSON
+// Retrieve toyhouse offenders JSON.
 $.getJSON( "https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/master/data/toyhouse.json", function(toyhouse_offenders) {
   // Toyhou.se loads everything at once, so no need for repeated checking.
   tagToyhouseHandles(toyhouse_offenders);

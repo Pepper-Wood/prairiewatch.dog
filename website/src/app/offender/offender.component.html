@@ -1,9 +1,51 @@
-<h1>{{ data.name }}</h1>
-<div *ngFor="let count of data.counts;">
-  <h2>{{ count.class }} | {{ count.category }}</h2>
-  <p class="angular-with-newlines">{{ count.summary }}</p>
-  <hr>
-  <markdown ngPreserveWhitespaces>
-    {{ count.summary }}
-  </markdown>
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1>{{ data.name }}</h1>
+    <table class="table table-sm table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" *ngIf="data.social_media.toyhouse">Toyhou.se</th>
+          <th scope="col" *ngIf="data.social_media.twitter">Twitter</th>
+          <th scope="col" *ngIf="data.social_media.websites">Other</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td *ngIf="data.social_media.toyhouse">
+            <ul>
+              <li *ngFor="let toyhouse of data.social_media.toyhouse;"><a href="https://toyhou.se/{{ toyhouse.handle }}">{{ toyhouse.handle }}</a></li>
+            </ul>
+          </td>
+          <td *ngIf="data.social_media.twitter">
+            <ul>
+              <li *ngFor="let twitter of data.social_media.twitter;"><a href="https://twitter.com/{{ twitter.handle }}">{{ twitter.handle }}</a></li>
+            </ul>
+          </td>
+          <td *ngIf="data.social_media.twitter">
+            <ul>
+              <li *ngFor="let website of data.social_media.websites;"><a href="{{ website }}">{{ website }}</a></li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="py-5 bg-light">
+  <div class="container" *ngFor="let count of data.counts; index as i">
+    <h2>
+      <a class="card-header" data-toggle="collapse" href="#offenseCollapse{{ i }}" role="button" aria-expanded="true">
+        {{ count.title }}
+      </a>
+    </h2>
+    <div class="collapse show" id="offenseCollapse{{ i }}">
+      <div class="card card-body angular-with-newlines">
+        <p>{{ count.class }} | {{ count.category }}</p>
+        <markdown ngPreserveWhitespaces>
+          {{ count.summary }}
+        </markdown>
+      </div>
+    </div>
+  </div>
 </div>

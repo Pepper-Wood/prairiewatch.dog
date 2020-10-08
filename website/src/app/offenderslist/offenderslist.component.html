@@ -1,0 +1,9 @@
+<div class="py-5 bg-light">
+  <div class="container">
+    <ul>
+      <li *ngFor="let offender of data | keyvalue">
+        <a href="{{ offender.value }}">{{ offender.key }}</a>
+      </li>
+    </ul>
+  </div>
+</div>

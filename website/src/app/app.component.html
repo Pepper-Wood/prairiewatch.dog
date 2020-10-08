@@ -6,11 +6,16 @@
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item"><button class="btn btn-primary my-2 my-sm-0">Submit an Offender</button></li>
+      <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/offenders">Offenders</a></li>
       <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/offenses">Offenses</a></li>
-      <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/b">Blog</a></li>
     </ul>
   </div>
 </nav>
 
 <router-outlet></router-outlet>
+
+<footer class="text-muted">
+  <div class="container py-5">
+    <p>Built with ❤︎ by <a href="https://github.com/Pepper-Wood">Pepper-Wood</a></p>
+  </div>
+</footer>

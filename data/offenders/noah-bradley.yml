@@ -6,9 +6,10 @@ social_media:
     - user_id: 14428486
       handle: noahbradley
   websites:
-    - noahbradley.com
+    - https://noahbradley.com/
 counts:
-  - class: sexual-assault-and-rape
+  - title: TODO
+    class: sexual-assault-and-rape
     category: C
     source:
       live_url: https://twitter.com/noahbradley/status/1274670378296774658

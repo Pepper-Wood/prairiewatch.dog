@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { OffenderComponent } from './offender/offender.component';
 import { HomeComponent } from './home/home.component';
 import { OffenseComponent } from './offense/offense.component';
+import { OffendersListComponent } from './offenderslist/offenderslist.component';
+import { OffensesListComponent } from './offenseslist/offenseslist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OffenderComponent,
     HomeComponent,
-    OffenseComponent
+    OffenseComponent,
+    OffendersListComponent,
+    OffensesListComponent
   ],
   imports: [
     BrowserModule,

@@ -8,9 +8,10 @@ social_media:
     - id: 809796269677768704
       handle: LuLaRoeSupport
   websites:
-    - lularoe.com
+    - https://www.lularoe.com/
 counts:
-  - class: multi-level-marketing
+  - title: TODO
+    class: multi-level-marketing
     category: C
     source:
       live_url: https://s3-us-west-2.amazonaws.com/llrprod/exigo/llrAdmin/documents/LLR_Ldr_Bonus_Plan.pdf

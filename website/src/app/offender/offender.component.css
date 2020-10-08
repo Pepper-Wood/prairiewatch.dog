@@ -1,3 +1,23 @@
-.angular-with-newlines {
-  white-space: pre-wrap;
+.jumbotron {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+
+.table th, td {
+  text-align: left;
+}
+
+.table ul {
+  padding-left: 20px;
+}
+
+.card-header {
+  padding: 0;
+  background: none;
+}
+
+.card-header:hover, .card-header:active {
+  text-decoration: none;
 }

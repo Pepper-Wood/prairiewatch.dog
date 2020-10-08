@@ -22,14 +22,14 @@ export class OffenderComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.slug = params.get('slug');
-      this.getJson().subscribe(data => {
+      this.loadYaml().subscribe(data => {
         this.data = data;
         console.log(data);
       });
     });
   }
 
-  public getJson(): Observable<any> {
+  public loadYaml(): Observable<any> {
     const url = 'https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/master/data/offenders/' + this.slug + '.yml';
     return this.http.get(url, {
       observe: 'body',

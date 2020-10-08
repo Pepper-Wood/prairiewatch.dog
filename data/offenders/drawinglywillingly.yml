@@ -35,23 +35,23 @@ counts:
   - title: TODO
     class: art-scam
     category: unfulfilled-commission
-    source:
-      live_url: https://artists-beware.livejournal.com/876645.html
-      archive:url: https://web.archive.org/web/20200923034642/https://artists-beware.livejournal.com/876645.html
-      incident_time: TODO
-      reported_time: "2015-10-20T12:48:00+00:00"
-      type: asdf
+    image_preview: https://picsum.photos/200/300
+    live_url: https://artists-beware.livejournal.com/876645.html
+    archive:url: https://web.archive.org/web/20200923034642/https://artists-beware.livejournal.com/876645.html
+    incident_time: TODO
+    reported_time: "2015-10-20T12:48:00+00:00"
+    type: asdf
     summary: |
       FurAffinity user RamTheDragon TODO
   - title: Pararipi confesses to being Prisma-Neko and to not fulfilling commissioned work
     class: art-scam
     category: account-hopping
-    source:
-      live_url: https://www.deviantart.com/pararipi/journal/A-serious-talk-563986114
-      archive_url: https://web.archive.org/web/20181215043947/https://www.deviantart.com/pararipi/journal/A-serious-talk-563986114
-      incident_time: "2015-10-03T00:00:00+00:00"
-      reported_time: "2015-10-03T00:00:00+00:00"
-      type: offender confession
+    image_preview: https://picsum.photos/200/300
+    live_url: https://www.deviantart.com/pararipi/journal/A-serious-talk-563986114
+    archive_url: https://web.archive.org/web/20181215043947/https://www.deviantart.com/pararipi/journal/A-serious-talk-563986114
+    incident_time: "2015-10-03T00:00:00+00:00"
+    reported_time: "2015-10-03T00:00:00+00:00"
+    source_type: offender confession
     summary: |
       Pararipi reveals that they are Prismaneko / Prisma-neko. They explain that their daughter suddenly required surgery on her ear that would cost 5000-8000 USD. "I took a LOAD of commissions" and estimate this to be around 50. "I lost track super easily."
 

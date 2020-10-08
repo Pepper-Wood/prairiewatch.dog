@@ -11,11 +11,11 @@ counts:
   - title: TODO
     class: sexual-assault-and-rape
     category: C
-    source:
-      live_url: https://twitter.com/noahbradley/status/1274670378296774658
-      archive_url: https://tweetsave.com/noahbradley/status/1274670378296774658
-      incident_time: "2020-06-21T11:47:00+00:00"
-      reported_time: "2020-06-21T11:47:00+00:00"
-      type: offender apology
+    image_preview: https://user-images.githubusercontent.com/7936720/95521933-ca618600-0998-11eb-98c9-412484673f2d.png
+    live_url: https://twitter.com/noahbradley/status/1274670378296774658
+    archive_url: https://web.archive.org/web/20200728024504/https://twitter.com/noahbradley/status/1274670378296774658
+    incident_time: "2020-06-21T11:47:00+00:00"
+    reported_time: "2020-06-21T11:47:00+00:00"
+    source_type: offender apology
     summary: >
       Noah Bradley posted a tweet featuring an apology and an admittance to past behaviors. "I was terrible to women." "I preyed on them. I ceaselessly hit on them. I pressured them into sex. I got too drunk and did all manner of dumb things. Yes, I was one of those shitty, creepy sexual predators you hear about." The confession "pressured them into sex" specifically admits to rape.

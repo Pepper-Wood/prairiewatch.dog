@@ -13,14 +13,14 @@ counts:
   - title: TODO
     class: multi-level-marketing
     category: C
-    source:
-      live_url: https://s3-us-west-2.amazonaws.com/llrprod/exigo/llrAdmin/documents/LLR_Ldr_Bonus_Plan.pdf
-      # source is a pdf and cannot be archived
-      archive_url: https://s3-us-west-2.amazonaws.com/llrprod/exigo/llrAdmin/documents/LLR_Ldr_Bonus_Plan.pdf
-      # Timestamp based on "Last Modified" header on the file
-      incident_time: "2020-04-15T22:59:58+00:00"
-      reported_time: "2020-04-15T22:59:58+00:00"
-      type: internal company documentation
+    image_preview: https://user-images.githubusercontent.com/7936720/95522083-29bf9600-0999-11eb-84ff-67a2c481e3e7.png
+    live_url: https://s3-us-west-2.amazonaws.com/llrprod/exigo/llrAdmin/documents/LLR_Ldr_Bonus_Plan.pdf
+    # source is a pdf and cannot be archived
+    archive_url: https://s3-us-west-2.amazonaws.com/llrprod/exigo/llrAdmin/documents/LLR_Ldr_Bonus_Plan.pdf
+    # Timestamp based on "Last Modified" header on the file
+    incident_time: "2020-04-15T22:59:58+00:00"
+    reported_time: "2020-04-15T22:59:58+00:00"
+    source_type: internal company documentation
     summary: |
       LuLaRoe utilizes a rank-based distributor bonus compensation plan. The business plan also details requirements for each rank based on the profit totals and number of LuLaRoe clothing articles sold.
       

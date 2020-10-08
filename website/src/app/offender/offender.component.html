@@ -33,18 +33,25 @@
 </section>
 
 <div class="py-5 bg-light">
-  <div class="container" *ngFor="let count of data.counts; index as i">
-    <h2>
-      <a class="card-header" data-toggle="collapse" href="#offenseCollapse{{ i }}" role="button" aria-expanded="true">
-        {{ count.title }}
-      </a>
-    </h2>
-    <div class="collapse show" id="offenseCollapse{{ i }}">
-      <div class="card card-body angular-with-newlines">
-        <p>{{ count.class }} | {{ count.category }}</p>
-        <markdown ngPreserveWhitespaces>
-          {{ count.summary }}
-        </markdown>
+  <div class="container">
+    <div class="card mb-3 pwd-border-warning" *ngFor="let count of data.counts">
+      <div class="row no-gutters">
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{ count.title }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ count.class }} | {{ count.category }}</h6>
+            <p class="card-text">
+              <markdown ngPreserveWhitespaces>
+                {{ count.summary }}
+              </markdown>
+            </p>
+            <a target="_blank" href="{{ count.live_url }}" class="card-link">Source Link</a>
+            <a target="_blank" href="{{ count.archive_url }}" class="card-link">Archived Source Link</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img src="{{ count.image_preview }}" class="card-img" alt="{{ count.title }}">
+        </div>
       </div>
     </div>
   </div>

@@ -21,3 +21,7 @@
 .card-header:hover, .card-header:active {
   text-decoration: none;
 }
+
+.pwd-border-warning {
+  border-left: 0.25rem solid #5bc0de;
+}

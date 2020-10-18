@@ -98,6 +98,7 @@ if __name__ == "__main__":
     }
     for filename in files:
         # Load the offender in the helper class.
+        print(f"Loading {filename}")
         offender_path = f"{offenders_path}/{filename}"
         offender = Offender(offender_path)
 

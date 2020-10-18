@@ -1,0 +1,24 @@
+---
+slug: #SLUG#
+name: TODO
+social_media:
+  toyhouse:
+    - id: 12345
+      handle: TODO
+  twitter:
+    - id: 12345
+      handle: TODO
+  websites:
+    - https://www.TODO.com/
+counts:
+  - title: TODO
+    class: TODO
+    category: TODO
+    image_preview: TODO
+    live_url: TODO
+    archive_url: TODO
+    incident_time: "9999-99-99"
+    reported_time: "9999-99-99"
+    source_type: TODO
+    summary: |
+      TODO

@@ -21,7 +21,7 @@
               <li *ngFor="let twitter of data.social_media.twitter;"><a href="https://twitter.com/{{ twitter.handle }}">{{ twitter.handle }}</a></li>
             </ul>
           </td>
-          <td *ngIf="data.social_media.twitter">
+          <td *ngIf="data.social_media.websites">
             <ul>
               <li *ngFor="let website of data.social_media.websites;"><a href="{{ website }}">{{ website }}</a></li>
             </ul>

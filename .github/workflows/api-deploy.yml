@@ -3,7 +3,7 @@ name: API Deploy Actions
 on:
   push:
     branches:
-    - master
+    - main
     paths:
     - 'api/**'
 
@@ -17,8 +17,8 @@ jobs:
     - run: git fetch
     - name: Checkout the acquia-api branchs
       run: git checkout origin/acquia-api
-    - name: Pull api folder from master into acquia-api
-      run: git checkout origin/master -- api
+    - name: Pull api folder from main into acquia-api
+      run: git checkout origin/main -- api
     - name: Remove .gitignore, composer.lock, and spec.yml
       run: rm .gitignore composer.lock spec.yml
       working-directory: ./api

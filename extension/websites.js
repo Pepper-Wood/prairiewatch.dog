@@ -24,6 +24,6 @@ function tagWebsiteWithHeader(offenders_urls) {
   }
 }
 
-$.getJSON( "https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/master/data/websites.json", function(offenders_urls) {
+$.getJSON( "https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/main/data/websites.json", function(offenders_urls) {
   tagWebsiteWithHeader(offenders_urls);
 });

@@ -18,7 +18,7 @@ export class OffendersListComponent implements OnInit {
   }
 
   loadJson() {
-    const url = 'https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/master/data/listing.json';
+    const url = 'https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/main/data/listing.json';
 
     this.http.get(url).subscribe((res) => {
       this.data = res;

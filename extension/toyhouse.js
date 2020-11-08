@@ -28,7 +28,7 @@ function tagToyhouseHandles(toyhouse_offenders) {
 }
 
 // Retrieve toyhouse offenders JSON.
-$.getJSON( "https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/master/data/toyhouse.json", function(toyhouse_offenders) {
+$.getJSON( "https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/main/data/toyhouse.json", function(toyhouse_offenders) {
   // Toyhou.se loads everything at once, so no need for repeated checking.
   tagToyhouseHandles(toyhouse_offenders);
 });

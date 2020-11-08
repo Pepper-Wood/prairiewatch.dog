@@ -30,7 +30,7 @@ export class OffenderComponent implements OnInit {
   }
 
   public loadYaml(): Observable<any> {
-    const url = 'https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/master/data/offenders/' + this.slug + '.yml';
+    const url = 'https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/main/data/offenders/' + this.slug + '.yml';
     return this.http.get(url, {
       observe: 'body',
       responseType: "text"   // This one here tells HttpClient to parse it as text, not as JSON

@@ -34,7 +34,7 @@ function tagTwitterHandles(twitter_offenders) {
 }
 
 // Retrieve twitter offenders JSON.
-$.getJSON( "https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/master/data/twitter.json", function(twitter_offenders) {
+$.getJSON( "https://raw.githubusercontent.com/Pepper-Wood/prairiewatch.dog/main/data/twitter.json", function(twitter_offenders) {
   // Repeat tagging every 3 seconds.
   window.setInterval(function(){ tagTwitterHandles(twitter_offenders); }, 3000);
 });

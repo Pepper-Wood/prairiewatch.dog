@@ -10,3 +10,8 @@ updates:
     directory: "/website"
     schedule:
       interval: "daily"
+
+  - package-ecosystem: "pip"
+    directory: "/scripts"
+    schedule:
+      interval: "daily"

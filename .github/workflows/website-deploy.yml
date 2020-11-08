@@ -3,7 +3,7 @@ name: Website Deploy Actions
 on:
   push:
     branches:
-    - master
+    - main
     paths:
     - 'website/**'
 

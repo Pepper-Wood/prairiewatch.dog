@@ -6,9 +6,6 @@ prairiewatch.dog
         <img src="https://img.shields.io/badge/Trello-Implementation%20Queue-blue" /></a>
     <a href="https://trello.com/b/54lTitGf" alt="Trello Offenders Queue">
         <img src="https://img.shields.io/badge/Trello-Offenders%20Queue-blue" /></a>
-    <a href="https://discord.gg/4uqUkSd6">
-        <img src="https://img.shields.io/discord/775053077488992306?logo=discord"
-            alt="chat on Discord"></a>
 </p>
 
 The internet is still a wild west, rife with mis-information and predators. The current system of writing "callout posts" and "cancelling" figures is antiquated. There's an excess of information and false information to keep facts sorted out.
